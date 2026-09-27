@@ -1,0 +1,9 @@
+{
+  "campaign_id": "watershed-2030",
+  "research_question": "Which measured land-use changes explain the recent nitrate increase in the North Basin?",
+  "evidence_standards_json": "[{\"id\":\"traceable\",\"description\":\"The finding must be supported by retrievable primary evidence.\"},{\"id\":\"scope\",\"description\":\"The finding must answer the frozen watershed research question.\"}]",
+  "reward_schedule_json": "[{\"ordinal\":1,\"reward_units\":30},{\"ordinal\":2,\"reward_units\":20},{\"ordinal\":3,\"reward_units\":10}]",
+  "budget_units": 100,
+  "commit_deadline_iso": "2030-01-02T00:00:00Z",
+  "reveal_deadline_iso": "2030-01-05T00:00:00Z"
+}

@@ -1,0 +1,151 @@
+{
+  "ctor": {
+    "params": [
+      [
+        "campaign_id",
+        "string"
+      ],
+      [
+        "research_question",
+        "string"
+      ],
+      [
+        "evidence_standards_json",
+        "string"
+      ],
+      [
+        "reward_schedule_json",
+        "string"
+      ],
+      [
+        "budget_units",
+        "int"
+      ],
+      [
+        "commit_deadline_iso",
+        "string"
+      ],
+      [
+        "reveal_deadline_iso",
+        "string"
+      ]
+    ],
+    "kwparams": {}
+  },
+  "methods": {
+    "claim_reward": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "close_empty_campaign": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "commit_finding": {
+      "params": [
+        [
+          "commitment_hash",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_accounting": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_campaign": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_commitment_hash": {
+      "params": [
+        [
+          "claim",
+          "string"
+        ],
+        [
+          "evidence_refs_json",
+          "string"
+        ],
+        [
+          "salt",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_history": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_registry": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_submission": {
+      "params": [
+        [
+          "researcher",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "refund_unspent_budget": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "resolve_next": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "dict",
+      "payable": false
+    },
+    "reveal_finding": {
+      "params": [
+        [
+          "claim",
+          "string"
+        ],
+        [
+          "evidence_refs_json",
+          "string"
+        ],
+        [
+          "salt",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}

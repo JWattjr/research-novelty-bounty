@@ -181,7 +181,13 @@ def test_changed_reveal_and_duplicate_commit_fail(direct_vm, direct_deploy, dire
             contract.reveal_finding(row[1], row[2], row[3])
 
 
-def test_unavailable_sources_are_uncertain_and_refundable(direct_vm, direct_deploy, direct_owner, direct_alice):
+@pytest.mark.parametrize("web_response", [
+    pytest.param({"status": 503, "body": b"service unavailable"}, id="non-200"),
+    pytest.param({"status": 200, "body": b""}, id="empty"),
+    pytest.param({"status": 200, "body": b"x" * 5001}, id="oversized"),
+    pytest.param({"status": 200, "body": b"\xff"}, id="invalid-utf8"),
+])
+def test_unavailable_sources_are_uncertain_and_refundable(direct_vm, direct_deploy, direct_owner, direct_alice, web_response):
     contract = deploy(direct_vm, direct_deploy, direct_owner)
     row = commit(
         contract, direct_vm, direct_alice,
@@ -191,7 +197,7 @@ def test_unavailable_sources_are_uncertain_and_refundable(direct_vm, direct_depl
     direct_vm.warp(REVEAL_TIME)
     reveal(contract, direct_vm, row)
     direct_vm.warp(RESOLVE_TIME)
-    direct_vm.mock_web(r".*", {"status": 503, "body": "temporary error"})
+    direct_vm.mock_web(r".*", web_response)
     result = contract.resolve_next()
     assert result["status"] == "UNCERTAIN"
     assert contract.get_registry()["findings"] == []

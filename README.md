@@ -6,7 +6,7 @@ Campaign-local novelty is the only novelty claim. This contract does not search 
 
 ## Toolchain
 
-The source pins `py-genlayer:5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng`. The installed GenVM linter validates this header. The official First Contract guide still shows a different runner hash as its example; network availability for this selected hash remains unverified because this project has not been deployed. The local v0.6 RC development dependencies are pinned in `requirements.txt`.
+The source pins `py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6`. The installed GenVM linter validates this header. The official First Contract guide still shows a different runner hash as its example; network availability for this selected hash remains unverified because this project has not been deployed. The local v0.6 RC development dependencies are pinned in `requirements.txt`.
 
 Install Python 3.14 and run:
 

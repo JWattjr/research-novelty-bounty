@@ -12,4 +12,8 @@ Run `python -m pytest` from the repository root. Tests use mocked direct-mode re
 | Local and IP-literal evidence references are rejected | `test_invalid_evidence_host_rejected_before_commit` |
 | Validator rejects altered support, stale snapshot digest, extra leader metadata, and a nonexistent equivalent entry | `test_validator_rejects_disagreement_stale_versions_and_forged_leader_fields` |
 
-The current direct-mode run passed 10 tests. GenVM lint passed 3 checks, contract validation identified 12 methods (6 views, 6 writes), and schema extraction succeeded. All checks were local; no live deployment was attempted.
+| Every model-returned judgment field is validated and compared or bound to frozen input | `test_every_returned_judgment_field_is_compared_or_snapshot_bound` |
+| HTTP error, empty body, oversized body, invalid UTF-8 all yield uncertainty and no reward | `test_unavailable_sources_are_uncertain_and_refundable` (four response cases) |
+| Validator rejects a changed submitted citation and forged evidence digest with support and novelty unchanged | `test_validator_rejects_forged_citation_with_same_novelty_and_support` |
+
+The current direct-mode run passed 15 tests. GenVM lint passed 3 checks, contract validation identified 12 methods (6 views, 6 writes), and schema extraction succeeded. All checks were local; no live deployment was attempted.

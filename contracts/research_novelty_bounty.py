@@ -1,4 +1,4 @@
-# { "Depends": "py-genlayer:5jycge4q8k23462jtb0b9fyey1s9qz928sz2nbrd9mg4sxqg2qng" }
+# { "Depends": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6" }
 
 """Versioned commit/reveal bounty for supported, campaign-local novel findings."""
 
@@ -7,7 +7,7 @@ import hashlib
 import json
 import re
 
-import genlayer as gl
+from genlayer import *
 
 
 MAX_SUBMISSIONS = 8
@@ -62,13 +62,9 @@ def _time_text(value: str, label: str) -> str:
 
 
 def _now() -> datetime:
-    message = getattr(gl, "message", None)
-    value = getattr(message, "datetime", None)
-    if value is None:
-        raw = getattr(message, "raw", {})
-        value = raw.get("datetime", "") if isinstance(raw, dict) else ""
+    raw = getattr(gl, "message_raw", {})
+    value = raw.get("datetime", "") if isinstance(raw, dict) else ""
     return _time(str(value), "block time")
-
 
 def _host(url: str) -> str:
     if not isinstance(url, str) or len(url) > MAX_URL_LENGTH or not url.startswith("https://"):
@@ -208,10 +204,17 @@ def _available_registry(snapshot: dict) -> set:
 
 
 def _valid_candidate(raw, snapshot: dict, submission: dict) -> dict:
-    if not isinstance(raw, dict) or set(raw) != {"snapshot_digest", "assessment"}:
+    expected = {"input_snapshot_digest", "snapshot_digest", "evidence_digest", "assessment"}
+    if not isinstance(raw, dict) or set(raw) != expected:
         raise ValueError("candidate schema")
-    if type(raw["snapshot_digest"]) is not str or raw["snapshot_digest"] != snapshot["snapshot_digest"]:
-        raise ValueError("stale snapshot")
+    if type(raw["input_snapshot_digest"]) is not str or raw["input_snapshot_digest"] != snapshot["snapshot_digest"]:
+        raise ValueError("stale input snapshot")
+    evidence_digest = raw["evidence_digest"]
+    if type(evidence_digest) is not str or not re.fullmatch(r"sha256:[0-9a-f]{64}", evidence_digest):
+        raise ValueError("evidence digest")
+    expected_digest = _digest({"input_snapshot_digest": snapshot["snapshot_digest"], "evidence_digest": evidence_digest})
+    if type(raw["snapshot_digest"]) is not str or raw["snapshot_digest"] != expected_digest:
+        raise ValueError("evidence snapshot binding")
     assessment = raw["assessment"]
     if not isinstance(assessment, dict) or set(assessment) != {"support", "novelty", "nearest_entry_id", "citations"}:
         raise ValueError("assessment schema")
@@ -238,7 +241,9 @@ def _valid_candidate(raw, snapshot: dict, submission: dict) -> dict:
     elif nearest != "":
         raise ValueError("only equivalent findings may name a nearest entry")
     return {
-        "snapshot_digest": snapshot["snapshot_digest"],
+        "input_snapshot_digest": snapshot["snapshot_digest"],
+        "snapshot_digest": expected_digest,
+        "evidence_digest": evidence_digest,
         "registry_version": snapshot["registry_version"],
         "support": support,
         "novelty": novelty,
@@ -248,29 +253,32 @@ def _valid_candidate(raw, snapshot: dict, submission: dict) -> dict:
 
 
 def _assessment_core(value: dict) -> tuple:
-    return (value["support"], value["novelty"], value["nearest_entry_id"])
+    return (
+        value["input_snapshot_digest"], value["snapshot_digest"], value["evidence_digest"],
+        value["support"], value["novelty"], value["nearest_entry_id"], tuple(value["citations"]),
+    )
 
 
-class ResearchNoveltyBounty(gl.contract.Contract):
-    owner: gl.Address
+class ResearchNoveltyBounty(gl.Contract):
+    owner: Address
     campaign_id: str
     research_question: str
     evidence_standards_json: str
     reward_schedule_json: str
-    budget_units: gl.u256
+    budget_units: u256
     commit_deadline_iso: str
     reveal_deadline_iso: str
     status: str
-    commitments: gl.storage.TreeMap[str, str]
-    submissions: gl.storage.TreeMap[str, str]
-    submission_order: gl.storage.DynArray[str]
-    registry: gl.storage.DynArray[str]
-    assessment_history: gl.storage.DynArray[str]
-    registry_version: gl.u256
-    resolution_index: gl.u256
-    reserved_units: gl.u256
-    paid_units: gl.u256
-    refunded_units: gl.u256
+    commitments: TreeMap[str, str]
+    submissions: TreeMap[str, str]
+    submission_order: DynArray[str]
+    registry: DynArray[str]
+    assessment_history: DynArray[str]
+    registry_version: u256
+    resolution_index: u256
+    reserved_units: u256
+    paid_units: u256
+    refunded_units: u256
     refund_done: bool
 
     def __init__(
@@ -279,7 +287,7 @@ class ResearchNoveltyBounty(gl.contract.Contract):
         research_question: str,
         evidence_standards_json: str,
         reward_schedule_json: str,
-        budget_units: gl.u256,
+        budget_units: u256,
         commit_deadline_iso: str,
         reveal_deadline_iso: str,
     ):
@@ -290,7 +298,7 @@ class ResearchNoveltyBounty(gl.contract.Contract):
         self.evidence_standards_json = _canonical(standards)
         if type(budget_units) is bool or not isinstance(budget_units, int) or not 0 < int(budget_units) <= MAX_BUDGET:
             raise gl.vm.UserError("[EXPECTED] campaign budget must be a positive bounded number of demo units")
-        self.budget_units = gl.u256(int(budget_units))
+        self.budget_units = u256(int(budget_units))
         schedule = _schedule(reward_schedule_json, int(self.budget_units))
         self.reward_schedule_json = _canonical(schedule)
         self.commit_deadline_iso = _time_text(commit_deadline_iso, "commit deadline")
@@ -298,11 +306,11 @@ class ResearchNoveltyBounty(gl.contract.Contract):
         if _time(self.commit_deadline_iso, "commit deadline") >= _time(self.reveal_deadline_iso, "reveal deadline"):
             raise gl.vm.UserError("[EXPECTED] reveal deadline must follow commit deadline")
         self.status = "OPEN"
-        self.registry_version = gl.u256(0)
-        self.resolution_index = gl.u256(0)
-        self.reserved_units = gl.u256(0)
-        self.paid_units = gl.u256(0)
-        self.refunded_units = gl.u256(0)
+        self.registry_version = u256(0)
+        self.resolution_index = u256(0)
+        self.reserved_units = u256(0)
+        self.paid_units = u256(0)
+        self.refunded_units = u256(0)
         self.refund_done = False
 
     def _sender(self) -> str:
@@ -392,11 +400,18 @@ class ResearchNoveltyBounty(gl.contract.Contract):
 
     def _assess_finding(self, snapshot: dict, submission: dict) -> dict:
         sources = [_fetch(url) for url in submission["evidence_refs"]]
+        evidence_digest = _digest({"input_snapshot_digest": snapshot["snapshot_digest"], "evidence": sources})
+        judgment_digest = _digest({"input_snapshot_digest": snapshot["snapshot_digest"], "evidence_digest": evidence_digest})
         available = [item for item in sources if item["available"]]
         available_urls = [item["url"] for item in available]
         if not available:
             assessment = {"support": "UNCERTAIN", "novelty": "UNCERTAIN", "nearest_entry_id": "", "citations": []}
-            return {"snapshot_digest": snapshot["snapshot_digest"], "assessment": assessment}
+            return {
+                "input_snapshot_digest": snapshot["snapshot_digest"],
+                "snapshot_digest": judgment_digest,
+                "evidence_digest": evidence_digest,
+                "assessment": assessment,
+            }
         payload = {
             "campaign_id": snapshot["campaign_id"],
             "contract_address": snapshot["contract_address"],
@@ -420,7 +435,12 @@ INPUT_JSON: """ + _canonical(payload)
             raise gl.vm.UserError("[LLM_ERROR] novelty response cites unavailable or unsubmitted evidence")
         if assessment["support"] != "UNCERTAIN" and not assessment["citations"]:
             raise gl.vm.UserError("[LLM_ERROR] determinate support finding requires a citation")
-        return {"snapshot_digest": snapshot["snapshot_digest"], "assessment": assessment}
+        return {
+            "input_snapshot_digest": snapshot["snapshot_digest"],
+            "snapshot_digest": judgment_digest,
+            "evidence_digest": evidence_digest,
+            "assessment": assessment,
+        }
 
     def _consensus_assessment(self, snapshot: dict, submission: dict) -> dict:
         def leader_fn():
@@ -444,7 +464,7 @@ INPUT_JSON: """ + _canonical(payload)
             except Exception:
                 return False
 
-        raw = gl.vm.run_nondet(leader_fn, validator_fn)
+        raw = gl.vm.run_nondet_unsafe(leader_fn, validator_fn)
         try:
             return _valid_candidate(raw, snapshot, submission)
         except Exception as exc:
@@ -460,7 +480,7 @@ INPUT_JSON: """ + _canonical(payload)
             "status": outcome,
             "snapshot_digest": record.get("snapshot_digest", ""),
         }))
-        self.resolution_index += gl.u256(1)
+        self.resolution_index += u256(1)
         if int(self.resolution_index) >= len(self.submission_order):
             self.status = "CLOSED"
         return {"status": outcome, "researcher": researcher, "resolution_index": int(self.resolution_index) - 1}
@@ -484,9 +504,16 @@ INPUT_JSON: """ + _canonical(payload)
 
         snapshot = self._snapshot(record)
         assessment = self._consensus_assessment(snapshot, record)
-        record["snapshot_digest"] = snapshot["snapshot_digest"]
+        record["input_snapshot_digest"] = snapshot["snapshot_digest"]
+        record["snapshot_digest"] = assessment["snapshot_digest"]
+        record["evidence_digest"] = assessment["evidence_digest"]
         record["registry_version"] = int(self.registry_version)
-        record["assessment"] = assessment
+        record["assessment"] = {
+            "support": assessment["support"],
+            "novelty": assessment["novelty"],
+            "nearest_entry_id": assessment["nearest_entry_id"],
+            "citations": assessment["citations"],
+        }
         support = assessment["support"]
         novelty = assessment["novelty"]
         if support != "SUPPORTED":
@@ -508,11 +535,11 @@ INPUT_JSON: """ + _canonical(payload)
             "researcher": researcher,
             "evidence_refs": record["evidence_refs"],
             "accepted_at_registry_version": ordinal,
-            "assessment_snapshot_digest": snapshot["snapshot_digest"],
+            "assessment_snapshot_digest": assessment["snapshot_digest"],
         }
         self.registry.append(_canonical(entry))
-        self.registry_version += gl.u256(1)
-        self.reserved_units += gl.u256(reward)
+        self.registry_version += u256(1)
+        self.reserved_units += u256(reward)
         record["entry_id"] = entry_id
         record["reward_units"] = reward
         result = self._save_and_advance(researcher, record, "ACCEPTED_NOVEL")
@@ -542,8 +569,8 @@ INPUT_JSON: """ + _canonical(payload)
             raise gl.vm.UserError("[EXPECTED] reward has already been claimed")
         if int(self.reserved_units) < reward:
             raise gl.vm.UserError("[INVARIANT] reward reservation is insufficient")
-        self.reserved_units -= gl.u256(reward)
-        self.paid_units += gl.u256(reward)
+        self.reserved_units -= u256(reward)
+        self.paid_units += u256(reward)
         record["reward_claimed"] = True
         self.submissions[researcher] = _canonical(record)
         return reward
@@ -559,7 +586,7 @@ INPUT_JSON: """ + _canonical(payload)
         available = int(self.budget_units) - int(self.reserved_units) - int(self.paid_units) - int(self.refunded_units)
         if available < 0:
             raise gl.vm.UserError("[INVARIANT] campaign budget conservation failed")
-        self.refunded_units += gl.u256(available)
+        self.refunded_units += u256(available)
         self.refund_done = True
         return available
 

@@ -14,4 +14,4 @@ Scope: contract source review against the other nine portfolio contracts, the na
 
 The distinction is local: the older comparators store a fixed review or pairwise classification, while this contract evolves a campaign registry and reward queue. The source is in contracts/research_novelty_bounty.py (_snapshot, _consensus_assessment, resolve_next, claim_reward).
 
-**Evidence status:** implemented; the current direct suite passes 10 tests. Phase 3 still needs the required forged-result, disagreement, evidence-failure, and accounting-boundary cases. The StudioNet runner probe passed, but this project has not had its own live demonstration yet.
+**Evidence status:** implemented; the current direct suite passes 15 tests, and the documented Phase 3 cases are covered. This contract deployed from the recorded source commit and its deployed blob matched Git. The live original-finding judgment finalized as support=UNCERTAIN and novelty=NOVEL after four rounds; the second finding remains revealed and unresolved. The run stopped without retry, reward, or public release. This is a local distinction claim, not ecosystem-wide originality.

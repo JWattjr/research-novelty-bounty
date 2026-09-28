@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.0",
+  "release_date": "2026-09-28",
+  "timezone": "Africa/Lagos",
+  "project": {
+    "name": "research-novelty-bounty",
+    "repository": "https://github.com/JWattjr/research-novelty-bounty",
+    "source_commit": "d0bd7be9e63d88137eac88de5cb69326cbea408a",
+    "source_path": "contracts/research_novelty_bounty.py",
+    "source_git_blob_sha1": "d6f20e60cb2510da3b0ad645342232fd445b7276",
+    "source_bytes": 30856
+  },
+  "network": {
+    "name": "GenLayer StudioNet",
+    "chain_id": 61999,
+    "portal_used": false,
+    "rpc": "https://studio.genlayer.com/api"
+  },
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "toolchain": {
+    "GenLayerJS": "1.1.8",
+    "GenLayer CLI": "0.39.2",
+    "Python": "3.14.2",
+    "genlayer-py": "0.19.0rc2",
+    "genlayer-test": "0.30.0rc2",
+    "genvm-linter": "0.11.1rc2"
+  },
+  "contract_address": "0x73688bF4D29240503D1Db71e26Ed618b4c06Aad8",
+  "deployment_transaction": {
+    "operation": "deploy_campaign",
+    "hash": "0xd5ed2da3968424bd97125822f4215180c759e807559ff868c9fca1604a34c011",
+    "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+    "submission_status": "SUBMITTED",
+    "expected_failure": false,
+    "acceptance_poll_status": "ACCEPTED",
+    "finality_status": "FINALIZED",
+    "leader_execution": "SUCCESS",
+    "leader_result_code": "return",
+    "transaction_execution_result": null,
+    "consensus_result": "MAJORITY_AGREE",
+    "rounds": 1,
+    "votes_committed": 5,
+    "votes_revealed": 5,
+    "vote_types": {
+      "AGREE": 3,
+      "IDLE": 2
+    }
+  },
+  "constructor": {
+    "campaign_id": "httpx-client-modes-2026-09-28",
+    "research_question": "Which public HTTPX interfaces document synchronous and asynchronous Python requests?",
+    "evidence_standards": [
+      {
+        "id": "primary_source",
+        "description": "The finding is supported by a pinned source published by the HTTPX upstream project."
+      },
+      {
+        "id": "api_mapping",
+        "description": "The finding accurately names the HTTPX client interfaces and the request mode each documents."
+      }
+    ],
+    "reward_schedule": [
+      {
+        "ordinal": 1,
+        "reward_units": 30
+      },
+      {
+        "ordinal": 2,
+        "reward_units": 20
+      }
+    ],
+    "budget_units": 100,
+    "commit_deadline_utc": "2026-09-27T23:54:48Z",
+    "reveal_deadline_utc": "2026-09-27T23:59:48Z",
+    "deployment_chain_time_utc": "2026-09-27T23:44:48Z",
+    "constructor_args": [
+      "httpx-client-modes-2026-09-28",
+      "Which public HTTPX interfaces document synchronous and asynchronous Python requests?",
+      "[{\"id\":\"primary_source\",\"description\":\"The finding is supported by a pinned source published by the HTTPX upstream project.\"},{\"id\":\"api_mapping\",\"description\":\"The finding accurately names the HTTPX client interfaces and the request mode each documents.\"}]",
+      "[{\"ordinal\":1,\"reward_units\":30},{\"ordinal\":2,\"reward_units\":20}]",
+      100,
+      "2026-09-27T23:54:48Z",
+      "2026-09-27T23:59:48Z"
+    ]
+  },
+  "evidence_source": {
+    "publisher": "encode/httpx",
+    "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md",
+    "anonymous_http_status": 200,
+    "response_bytes": 4944,
+    "contract_fetch_cap_bytes": 5000,
+    "external_anonymous_check": "HTTP 200; raw byte size was measured with curl without credentials.",
+    "genlayer_fetch_availability_exposed_in_public_state": false
+  },
+  "researchers": [
+    {
+      "role": "original_finding",
+      "address": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "claim": "HTTPX documents Client for synchronous requests and AsyncClient for asynchronous requests.",
+      "evidence_refs": [
+        "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+      ],
+      "salt": "5577951701e7cd2ac003ee50981a1f74",
+      "evidence_refs_json": "[\"https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md\"]",
+      "commitment": "sha256:c940867942cee74c74f719cd60eb955f6ad3243f6b435d3d08bd58671eb95100"
+    },
+    {
+      "role": "paraphrase",
+      "address": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+      "claim": "HTTPX offers a blocking Client interface and an asynchronous AsyncClient interface for Python requests.",
+      "evidence_refs": [
+        "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+      ],
+      "salt": "9878f09d74ffb816733326c88cd93268",
+      "evidence_refs_json": "[\"https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md\"]",
+      "commitment": "sha256:9f65cde7a08d995424acb22befef2e3e4d3a5c84f691a46ef2e8ad6ec612543c"
+    }
+  ],
+  "commitment_computation_note": "Local reproduction of the pinned _normal_finding/_canonical/_digest code after the SDK's get_commitment_hash read returned an RLP decoding error; each later reveal must match the on-chain commitment.",
+  "transactions": [
+    {
+      "operation": "deploy_campaign",
+      "hash": "0xd5ed2da3968424bd97125822f4215180c759e807559ff868c9fca1604a34c011",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": 1,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 2
+      }
+    },
+    {
+      "operation": "commit_original_finding",
+      "hash": "0x9b83e08efc020b261aa3b19d760ce1bafc083e5201a26b42fb71405132b31ae1",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": 1,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 2
+      }
+    },
+    {
+      "operation": "commit_paraphrase",
+      "hash": "0x915afd37be4789ccd930b72e166dc653c8d2c0d5dffe94647d69d7bc33fcc9a9",
+      "actor": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": 1,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 2
+      }
+    },
+    {
+      "operation": "reveal_original_finding",
+      "hash": "0x22e1c6dcc4710eb1bc7987944b375920cc0627f34d18004f00837282fe353212",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": 1,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 2
+      }
+    },
+    {
+      "operation": "reveal_paraphrase",
+      "hash": "0xa9f3afa31ffcab252d8978dc7636333a68f6e278bf4ddd3bf23347afd724dfc8",
+      "actor": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": 1,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_types": {
+        "AGREE": 5
+      }
+    },
+    {
+      "operation": "resolve_original_finding",
+      "hash": "0x0a218ce47551830609e2ee46a3bd27a862063992510b40f9dded739ccbc36cd4",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": 4,
+      "votes_committed": 5,
+      "votes_revealed": 5,
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 1,
+        "DISAGREE": 1
+      }
+    }
+  ],
+  "expected_failure_transactions": [],
+  "live_judgment": {
+    "status": "UNCERTAIN",
+    "support": "UNCERTAIN",
+    "novelty": "NOVEL",
+    "citations": [
+      "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+    ],
+    "evidence_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+    "consensus_result": "MAJORITY_AGREE",
+    "rounds": 4,
+    "votes_committed": 5,
+    "votes_revealed": 5,
+    "vote_types": {
+      "AGREE": 3,
+      "IDLE": 1,
+      "DISAGREE": 1
+    },
+    "fetch_cause": "Not established. External curl returned 200/4,944 bytes; contract public state has no separate web.get availability field.",
+    "stop_policy": "Stopped after first UNCERTAIN judgment. No retry, paraphrase resolution, reward claim, refund, or campaign closure was submitted."
+  },
+  "final_onchain_readback": {
+    "get_campaign": {
+      "budget_units": 100,
+      "campaign_id": "httpx-client-modes-2026-09-28",
+      "commit_deadline": "2026-09-27T23:54:48Z",
+      "evidence_standards": [
+        {
+          "description": "The finding is supported by a pinned source published by the HTTPX upstream project.",
+          "id": "primary_source"
+        },
+        {
+          "description": "The finding accurately names the HTTPX client interfaces and the request mode each documents.",
+          "id": "api_mapping"
+        }
+      ],
+      "registry_version": 0,
+      "research_question": "Which public HTTPX interfaces document synchronous and asynchronous Python requests?",
+      "resolution_index": 1,
+      "reveal_deadline": "2026-09-27T23:59:48Z",
+      "reward_schedule": [
+        {
+          "ordinal": 1,
+          "reward_units": 30
+        },
+        {
+          "ordinal": 2,
+          "reward_units": 20
+        }
+      ],
+      "status": "OPEN",
+      "submission_count": 2
+    },
+    "get_registry": {
+      "findings": [],
+      "version": 0
+    },
+    "get_submission": {
+      "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+        "assessment": {
+          "citations": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "nearest_entry_id": "",
+          "novelty": "NOVEL",
+          "support": "UNCERTAIN"
+        },
+        "campaign_id": "httpx-client-modes-2026-09-28",
+        "claim": "HTTPX documents Client for synchronous requests and AsyncClient for asynchronous requests.",
+        "commitment_hash": "sha256:c940867942cee74c74f719cd60eb955f6ad3243f6b435d3d08bd58671eb95100",
+        "contract_address": "0x73688bf4d29240503d1db71e26ed618b4c06aad8",
+        "evidence_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "input_snapshot_digest": "sha256:a68aa7ccdb0f0960676d6d55186e3ceb233776d93221a9e763b2f7b418daa697",
+        "registry_version": 0,
+        "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+        "salt": "5577951701e7cd2ac003ee50981a1f74",
+        "snapshot_digest": "sha256:3c33d06d90003363ce1e3f856967ddd0e0128d89c314a33854cb7cd0e27af7b0",
+        "status": "UNCERTAIN"
+      },
+      "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+        "campaign_id": "httpx-client-modes-2026-09-28",
+        "claim": "HTTPX offers a blocking Client interface and an asynchronous AsyncClient interface for Python requests.",
+        "commitment_hash": "sha256:9f65cde7a08d995424acb22befef2e3e4d3a5c84f691a46ef2e8ad6ec612543c",
+        "contract_address": "0x73688bf4d29240503d1db71e26ed618b4c06aad8",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+        "salt": "9878f09d74ffb816733326c88cd93268",
+        "status": "REVEALED"
+      }
+    },
+    "get_history": {
+      "entries": [
+        {
+          "registry_version": 0,
+          "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+          "snapshot_digest": "sha256:3c33d06d90003363ce1e3f856967ddd0e0128d89c314a33854cb7cd0e27af7b0",
+          "status": "UNCERTAIN",
+          "submission_index": 0
+        }
+      ]
+    },
+    "get_accounting": {
+      "available_units": 100,
+      "budget_units": 100,
+      "conserved": true,
+      "paid_units": 0,
+      "refunded_units": 0,
+      "reserved_units": 0
+    },
+    "scope_note": "The contract has no get_state method; all available public state views are included."
+  },
+  "demo_result": "STOPPED_AFTER_UNCERTAIN_SUPPORT",
+  "demo_limits": [
+    "The HTTPX README is a real pinned public source; the two research claims are synthetic demonstration inputs.",
+    "The original finding was not accepted, no registry entry or reward was created, and the paraphrase remains revealed but unresolved.",
+    "Budget values are synthetic accounting units; no real custody or payment integration exists.",
+    "No GenLayer Portal submission was made."
+  ],
+  "self_review": {
+    "technical_readiness": {
+      "gate": "PASS",
+      "basis": "15 mocked direct-mode tests passed; GenVM lint passed 3 checks; SDK validation passed; deployment, commits, reveals, and the first resolution finalized; deployed source blob matches the pushed commit."
+    },
+    "distinctiveness": {
+      "gate": "PASS",
+      "basis": "The serial, versioned campaign novelty registry and no-second-reward equivalent-link transition are distinct in the local source audit and covered by direct-mode tests; the live transition remains unproven."
+    },
+    "evidence_readiness": {
+      "gate": "FAIL",
+      "basis": "The first live support judgment finalized as UNCERTAIN, so no original reward or paraphrase link was demonstrated. The URL returned HTTP 200/4,944 bytes externally, but contract fetch availability was not exposed separately."
+    },
+    "verdict": "NOT READY",
+    "actual_run_levels": [
+      "Static source review",
+      "15 mocked direct-mode tests",
+      "GenVM lint and SDK contract validation",
+      "StudioNet live deployment, commit/reveal, and one finalized live resolution"
+    ],
+    "unverified": [
+      "Whether the contract fetched the complete HTTPX README body; public state exposes citations and a digest but no independent availability flag.",
+      "No paraphrase resolution, reward claim, replay rejection, refund, or full budget lifecycle was run after the uncertain judgment.",
+      "No real reward custody, payment, or off-chain fulfillment."
+    ],
+    "top_blockers": [
+      {
+        "file": "contracts/research_novelty_bounty.py",
+        "line": 401,
+        "detail": "The live assessment fetches source here; the public result did not establish a determinate support judgment."
+      },
+      {
+        "file": "contracts/research_novelty_bounty.py",
+        "line": 407,
+        "detail": "Unavailable sources map to UNCERTAIN; contract state does not separately persist fetch availability."
+      }
+    ],
+    "distinctive_contribution": "A serial, versioned campaign registry that rewards supported novel findings once and links equivalent paraphrases to an existing entry without a second reward."
+  }
+}

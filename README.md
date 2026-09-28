@@ -6,7 +6,7 @@ Campaign-local novelty is the only novelty claim. This contract does not search 
 
 ## Toolchain
 
-The source pins `py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6`. The installed GenVM linter validates this header. The official First Contract guide still shows a different runner hash as its example; network availability for this selected hash remains unverified because this project has not been deployed. The local v0.6 RC development dependencies are pinned in `requirements.txt`.
+The source pins py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6. The installed GenVM linter validates this header. A StudioNet deployment from the recorded source commit finalized successfully, and the deployed source matched its Git blob. The local v0.6 RC development dependencies are pinned in requirements.txt.
 
 Install Python 3.14 and run:
 
@@ -39,6 +39,6 @@ Constructor inputs are in [examples/constructor.json](examples/constructor.json)
 
 The prototype allows at most eight commitments, eight standards, eight rewarded registry entries, and three evidence URLs per submission. Evidence URLs must use HTTPS and a public-DNS hostname; bodies must be nonempty UTF-8 and no more than 5,000 bytes. The contract does not authenticate publishers, verify signatures, resolve DNS, or validate document freshness. Fetched text is untrusted prompt input. No available source yields `UNCERTAIN`; malformed consensus output reverts resolution without advancing the queue.
 
-Rewards are synthetic demo units and do not represent a token, native value, or real payment. No contract deployment or Portal submission has occurred.
+Rewards are synthetic demo units and do not represent a token, native value, or real payment. The first live support judgment finalized as UNCERTAIN; the campaign stopped with one revealed submission unresolved, no registry entry, and no reward. No Portal submission occurred.
 
-See [mechanism differentiation](docs/MECHANISM_DIFFERENTIATION.md), [test matrix](docs/TEST_MATRIX.md), [security notes](docs/SECURITY_NOTES.md), [demo sequence](examples/demo_sequence.md), and the [undeployed submission draft](SUBMISSION_DRAFT.md).
+See [mechanism differentiation](docs/MECHANISM_DIFFERENTIATION.md), [test matrix](docs/TEST_MATRIX.md), [security notes](docs/SECURITY_NOTES.md), [demo sequence](examples/demo_sequence.md), and the [submission draft](SUBMISSION_DRAFT.md).

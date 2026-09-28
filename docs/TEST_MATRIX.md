@@ -16,4 +16,4 @@ Run `python -m pytest` from the repository root. Tests use mocked direct-mode re
 | HTTP error, empty body, oversized body, invalid UTF-8 all yield uncertainty and no reward | `test_unavailable_sources_are_uncertain_and_refundable` (four response cases) |
 | Validator rejects a changed submitted citation and forged evidence digest with support and novelty unchanged | `test_validator_rejects_forged_citation_with_same_novelty_and_support` |
 
-The current direct-mode run passed 15 tests. GenVM lint passed 3 checks, contract validation identified 12 methods (6 views, 6 writes), and schema extraction succeeded. All checks were local; no live deployment was attempted.
+The current direct-mode run passed 15 tests. GenVM lint passed 3 checks, contract validation identified 12 methods (6 views, 6 writes), and schema extraction succeeded. The live StudioNet attempt is recorded separately: deployment and the first resolution finalized, but support was UNCERTAIN and the demonstration stopped without retry.

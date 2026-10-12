@@ -158,18 +158,21 @@ def _digest(value) -> str:
 
 
 def _fetch(url: str) -> dict:
+    size = 0
     try:
         response = gl.nondet.web.get(url)
+        if isinstance(response.body, bytes):
+            size = len(response.body)
         if response.status != 200 or not isinstance(response.body, bytes):
-            return {"url": url, "available": False, "text": ""}
-        if not 0 < len(response.body) <= MAX_SOURCE_BYTES:
-            return {"url": url, "available": False, "text": ""}
+            return {"url": url, "available": False, "status": "unavailable", "byte_count": size, "text": ""}
+        if size > MAX_SOURCE_BYTES:
+            return {"url": url, "available": False, "status": "oversized", "byte_count": size, "text": ""}
         text = response.body.decode("utf-8")
         if not text.strip():
-            return {"url": url, "available": False, "text": ""}
-        return {"url": url, "available": True, "text": text}
+            return {"url": url, "available": False, "status": "unavailable", "byte_count": size, "text": ""}
+        return {"url": url, "available": True, "status": "fetched", "byte_count": size, "text": text}
     except Exception:
-        return {"url": url, "available": False, "text": ""}
+        return {"url": url, "available": False, "status": "unavailable", "byte_count": size, "text": ""}
 
 
 def _parse_response(raw) -> dict:
@@ -216,7 +219,7 @@ def _valid_candidate(raw, snapshot: dict, submission: dict) -> dict:
     if type(raw["snapshot_digest"]) is not str or raw["snapshot_digest"] != expected_digest:
         raise ValueError("evidence snapshot binding")
     assessment = raw["assessment"]
-    if not isinstance(assessment, dict) or set(assessment) != {"support", "novelty", "nearest_entry_id", "citations"}:
+    if not isinstance(assessment, dict) or set(assessment) != {"support", "novelty", "nearest_entry_id", "citations", "sources"}:
         raise ValueError("assessment schema")
     support, novelty, nearest, citations = (
         assessment["support"], assessment["novelty"], assessment["nearest_entry_id"], assessment["citations"]
@@ -233,6 +236,24 @@ def _valid_candidate(raw, snapshot: dict, submission: dict) -> dict:
         raise ValueError("invented or unsubmitted citation")
     if len(set(citations)) != len(citations):
         raise ValueError("duplicate citation")
+    sources = assessment["sources"]
+    if not isinstance(sources, list) or len(sources) != len(submission["evidence_refs"]):
+        raise ValueError("source availability list")
+    for url, source in zip(submission["evidence_refs"], sources):
+        if not isinstance(source, dict) or set(source) != {"url", "status", "byte_count"}:
+            raise ValueError("source availability schema")
+        if source["url"] != url or source["status"] not in ("fetched", "unavailable", "oversized"):
+            raise ValueError("source availability identity or status")
+        size = source["byte_count"]
+        if type(size) is not int or size < 0:
+            raise ValueError("source byte count")
+        if source["status"] == "fetched" and not 0 < size <= MAX_SOURCE_BYTES:
+            raise ValueError("fetched source size")
+        if source["status"] == "oversized" and size <= MAX_SOURCE_BYTES:
+            raise ValueError("oversized source size")
+    fetched_urls = {source["url"] for source in sources if source["status"] == "fetched"}
+    if any(url not in fetched_urls for url in citations):
+        raise ValueError("citation source was not fetched")
     if support != "UNCERTAIN" and not citations:
         raise ValueError("determinate support finding must cite available evidence")
     if novelty == "EQUIVALENT":
@@ -249,13 +270,14 @@ def _valid_candidate(raw, snapshot: dict, submission: dict) -> dict:
         "novelty": novelty,
         "nearest_entry_id": nearest,
         "citations": citations,
+        "sources": sources,
     }
 
 
 def _assessment_core(value: dict) -> tuple:
     return (
         value["input_snapshot_digest"], value["snapshot_digest"], value["evidence_digest"],
-        value["support"], value["novelty"], value["nearest_entry_id"], tuple(value["citations"]),
+        value["support"], value["novelty"], value["nearest_entry_id"], tuple(value["citations"]), _canonical(value["sources"]),
     )
 
 
@@ -402,10 +424,11 @@ class ResearchNoveltyBounty(gl.Contract):
         sources = [_fetch(url) for url in submission["evidence_refs"]]
         evidence_digest = _digest({"input_snapshot_digest": snapshot["snapshot_digest"], "evidence": sources})
         judgment_digest = _digest({"input_snapshot_digest": snapshot["snapshot_digest"], "evidence_digest": evidence_digest})
+        source_statuses = [{"url": item["url"], "status": item["status"], "byte_count": item["byte_count"]} for item in sources]
         available = [item for item in sources if item["available"]]
         available_urls = [item["url"] for item in available]
         if not available:
-            assessment = {"support": "UNCERTAIN", "novelty": "UNCERTAIN", "nearest_entry_id": "", "citations": []}
+            assessment = {"support": "UNCERTAIN", "novelty": "UNCERTAIN", "nearest_entry_id": "", "citations": [], "sources": source_statuses}
             return {
                 "input_snapshot_digest": snapshot["snapshot_digest"],
                 "snapshot_digest": judgment_digest,
@@ -431,6 +454,7 @@ INPUT_JSON: """ + _canonical(payload)
         except Exception as exc:
             raise gl.vm.UserError(f"[LLM_ERROR] novelty assessment failed: {exc}")
         assessment = _parse_response(raw)
+        assessment["sources"] = source_statuses
         if any(url not in available_urls for url in assessment["citations"]):
             raise gl.vm.UserError("[LLM_ERROR] novelty response cites unavailable or unsubmitted evidence")
         if assessment["support"] != "UNCERTAIN" and not assessment["citations"]:
@@ -513,6 +537,7 @@ INPUT_JSON: """ + _canonical(payload)
             "novelty": assessment["novelty"],
             "nearest_entry_id": assessment["nearest_entry_id"],
             "citations": assessment["citations"],
+            "sources": assessment["sources"],
         }
         support = assessment["support"]
         novelty = assessment["novelty"]

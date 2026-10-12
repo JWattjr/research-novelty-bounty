@@ -200,6 +200,10 @@ def test_unavailable_sources_are_uncertain_and_refundable(direct_vm, direct_depl
     direct_vm.mock_web(r".*", web_response)
     result = contract.resolve_next()
     assert result["status"] == "UNCERTAIN"
+    source = contract.get_submission(address_key(direct_alice))["assessment"]["sources"][0]
+    assert source["url"] == URL_A
+    assert source["status"] == ("oversized" if len(web_response["body"]) > 5000 else "unavailable")
+    assert source["byte_count"] == len(web_response["body"])
     assert contract.get_registry()["findings"] == []
     assert contract.get_accounting()["reserved_units"] == 0
     assert direct_vm.run_validator()

@@ -5,8 +5,8 @@ SOURCE = Path(__file__).resolve().parents[1] / "contracts" / 'research_novelty_b
 OWNER_NAMES = ['_consensus_assessment']
 CANDIDATE_NAMES = ['_valid_candidate']
 VECTOR_NAMES = ['_assessment_core']
-REQUIRED_COMPARE_KEYS = frozenset(['support', 'novelty', 'nearest_entry_id', 'citations', 'input_snapshot_digest', 'snapshot_digest', 'evidence_digest'])
-REQUIRED_SCHEMAS = tuple(frozenset(row) for row in [{'assessment', 'input_snapshot_digest', 'snapshot_digest', 'evidence_digest'}, {'nearest_entry_id', 'citations', 'support', 'novelty'}])
+REQUIRED_COMPARE_KEYS = frozenset(['support', 'novelty', 'nearest_entry_id', 'citations', 'input_snapshot_digest', 'snapshot_digest', 'evidence_digest', 'sources'])
+REQUIRED_SCHEMAS = tuple(frozenset(row) for row in [{'assessment', 'input_snapshot_digest', 'snapshot_digest', 'evidence_digest'}, {'nearest_entry_id', 'citations', 'support', 'novelty', 'sources'}])
 BOUND_FUNCTION = '_valid_candidate'
 
 

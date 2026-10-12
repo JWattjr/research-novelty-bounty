@@ -1,0 +1,3247 @@
+{
+  "schema_version": "2.0",
+  "release_date": "2026-10-12",
+  "timezone": "Africa/Lagos",
+  "network": {
+    "name": "StudioNet",
+    "chain_id": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "portal_used": false
+  },
+  "transactions": [
+    {
+      "operation": "deploy_campaign",
+      "hash": "0x8edcf5cddd6400466ffc81b07d5dcfb5479a24c1c3a71c52cd59eb3b9a0e69c1",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x8edcf5cddd6400466ffc81b07d5dcfb5479a24c1c3a71c52cd59eb3b9a0e69c1",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 1,
+        "AGREE": 4
+      }
+    },
+    {
+      "operation": "commit_finding:F1",
+      "hash": "0xd58c7d0591c532217f7e40b38d4be0ed7d786610c794e5309167fa47f2c458a7",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd58c7d0591c532217f7e40b38d4be0ed7d786610c794e5309167fa47f2c458a7",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "AGREE": 5
+      }
+    },
+    {
+      "operation": "commit_finding:F2",
+      "hash": "0x7b3c975f9db4845f8e7dcbffb83c2cd27089dd22474170bad9b85330bdbebe09",
+      "actor": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x7b3c975f9db4845f8e7dcbffb83c2cd27089dd22474170bad9b85330bdbebe09",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    },
+    {
+      "operation": "commit_finding:F3",
+      "hash": "0x73e64b69188947ad05fa754dfaa4bd294d0dc1ba5862f4c542a18243ec64e302",
+      "actor": "0x0839A6DDCeC7aA5E6028490266D6D3EFabE316B5",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x73e64b69188947ad05fa754dfaa4bd294d0dc1ba5862f4c542a18243ec64e302",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 2
+      }
+    },
+    {
+      "operation": "reveal_finding:forged_F3",
+      "hash": "0xe7e0b6ebfc52aa4d61da46d2bcbdf36b5730bbc7680492359dc38215d0b3f2a9",
+      "actor": "0x0839A6DDCeC7aA5E6028490266D6D3EFabE316B5",
+      "submission_status": "SUBMITTED",
+      "expected_failure": true,
+      "expected_failure_label": "reveal does not match the researcher-bound commitment",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xe7e0b6ebfc52aa4d61da46d2bcbdf36b5730bbc7680492359dc38215d0b3f2a9",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "ERROR",
+      "leader_result_code": "rollback",
+      "leader_result": {
+        "raw": "AVtFWFBFQ1RFRF0gcmV2ZWFsIGRvZXMgbm90IG1hdGNoIHRoZSByZXNlYXJjaGVyLWJvdW5kIGNvbW1pdG1lbnQ=",
+        "status": "rollback",
+        "payload": "[EXPECTED] reveal does not match the researcher-bound commitment"
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "AGREE": 5
+      }
+    },
+    {
+      "operation": "reveal_finding:F1",
+      "hash": "0xa8316de9d4a2985d9fc4aaf585d9bf007a2b2c096691f348539cc4afb1c99153",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xa8316de9d4a2985d9fc4aaf585d9bf007a2b2c096691f348539cc4afb1c99153",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "AGREE": 3,
+        "IDLE": 2
+      }
+    },
+    {
+      "operation": "reveal_finding:F2",
+      "hash": "0xb885cb07bea461f1b7c88908bc731494774ecfc5ddc6af1a4cdfe7fa62bd3e52",
+      "actor": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xb885cb07bea461f1b7c88908bc731494774ecfc5ddc6af1a4cdfe7fa62bd3e52",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    },
+    {
+      "operation": "reveal_finding:F3",
+      "hash": "0x41da6104a0bfe9d30bd7335f846133abe78818eea8a2f1fd128eddf2331596d6",
+      "actor": "0x0839A6DDCeC7aA5E6028490266D6D3EFabE316B5",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x41da6104a0bfe9d30bd7335f846133abe78818eea8a2f1fd128eddf2331596d6",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AAA=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            0
+          ],
+          "readable": "null"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    },
+    {
+      "operation": "resolve_next:F1",
+      "hash": "0x0c91adb9f51af4f2db4f5d4621f7246615b096826759c294998b902329e128d3",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x0c91adb9f51af4f2db4f5d4621f7246615b096826759c294998b902329e128d3",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "ADYIZW50cnlfaWRERi0wMDAwMDEQcmVnaXN0cnlfdmVyc2lvbgkKcmVzZWFyY2hlctQCMHhkYjQzM2ZmNjE0YmRkMWVjZTIxYWE5NzIyMWMzZTBhN2VjZjc5YzkyEHJlc29sdXRpb25faW5kZXgBDHJld2FyZF91bml0c/EBBnN0YXR1c3RBQ0NFUFRFRF9OT1ZFTA==",
+        "status": "return",
+        "payload": {
+          "raw": [
+            54,
+            8,
+            101,
+            110,
+            116,
+            114,
+            121,
+            95,
+            105,
+            100,
+            68,
+            70,
+            45,
+            48,
+            48,
+            48,
+            48,
+            48,
+            49,
+            16,
+            114,
+            101,
+            103,
+            105,
+            115,
+            116,
+            114,
+            121,
+            95,
+            118,
+            101,
+            114,
+            115,
+            105,
+            111,
+            110,
+            9,
+            10,
+            114,
+            101,
+            115,
+            101,
+            97,
+            114,
+            99,
+            104,
+            101,
+            114,
+            212,
+            2,
+            48,
+            120,
+            100,
+            98,
+            52,
+            51,
+            51,
+            102,
+            102,
+            54,
+            49,
+            52,
+            98,
+            100,
+            100,
+            49,
+            101,
+            99,
+            101,
+            50,
+            49,
+            97,
+            97,
+            57,
+            55,
+            50,
+            50,
+            49,
+            99,
+            51,
+            101,
+            48,
+            97,
+            55,
+            101,
+            99,
+            102,
+            55,
+            57,
+            99,
+            57,
+            50,
+            16,
+            114,
+            101,
+            115,
+            111,
+            108,
+            117,
+            116,
+            105,
+            111,
+            110,
+            95,
+            105,
+            110,
+            100,
+            101,
+            120,
+            1,
+            12,
+            114,
+            101,
+            119,
+            97,
+            114,
+            100,
+            95,
+            117,
+            110,
+            105,
+            116,
+            115,
+            241,
+            1,
+            6,
+            115,
+            116,
+            97,
+            116,
+            117,
+            115,
+            116,
+            65,
+            67,
+            67,
+            69,
+            80,
+            84,
+            69,
+            68,
+            95,
+            78,
+            79,
+            86,
+            69,
+            76
+          ],
+          "readable": "{\"entry_id\":\"F-000001\",\"registry_version\":1,\"researcher\":\"0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92\",\"resolution_index\":0,\"reward_units\":30,\"status\":\"ACCEPTED_NOVEL\"}"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    },
+    {
+      "operation": "resolve_next:F2",
+      "hash": "0x1a979272838be096b076b16cafbf1f03b1c74f3ea567430bbcd5d8282e40fa1a",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x1a979272838be096b076b16cafbf1f03b1c74f3ea567430bbcd5d8282e40fa1a",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AB4KcmVzZWFyY2hlctQCMHgyYzhlYjVkYjExMDVhODViZTY2YmFkYWZlZDg4ZDEwY2YzOTNjZGQ4EHJlc29sdXRpb25faW5kZXgJBnN0YXR1c4wBTElOS0VEX0VRVUlWQUxFTlQ=",
+        "status": "return",
+        "payload": {
+          "raw": [
+            30,
+            10,
+            114,
+            101,
+            115,
+            101,
+            97,
+            114,
+            99,
+            104,
+            101,
+            114,
+            212,
+            2,
+            48,
+            120,
+            50,
+            99,
+            56,
+            101,
+            98,
+            53,
+            100,
+            98,
+            49,
+            49,
+            48,
+            53,
+            97,
+            56,
+            53,
+            98,
+            101,
+            54,
+            54,
+            98,
+            97,
+            100,
+            97,
+            102,
+            101,
+            100,
+            56,
+            56,
+            100,
+            49,
+            48,
+            99,
+            102,
+            51,
+            57,
+            51,
+            99,
+            100,
+            100,
+            56,
+            16,
+            114,
+            101,
+            115,
+            111,
+            108,
+            117,
+            116,
+            105,
+            111,
+            110,
+            95,
+            105,
+            110,
+            100,
+            101,
+            120,
+            9,
+            6,
+            115,
+            116,
+            97,
+            116,
+            117,
+            115,
+            140,
+            1,
+            76,
+            73,
+            78,
+            75,
+            69,
+            68,
+            95,
+            69,
+            81,
+            85,
+            73,
+            86,
+            65,
+            76,
+            69,
+            78,
+            84
+          ],
+          "readable": "{\"researcher\":\"0x2c8eb5db1105a85be66badafed88d10cf393cdd8\",\"resolution_index\":1,\"status\":\"LINKED_EQUIVALENT\"}"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    },
+    {
+      "operation": "resolve_next:F3",
+      "hash": "0xf89b8f25772d8f30ad25832ed9c6274cd9435d6574b07bec838b42c6a782367e",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xf89b8f25772d8f30ad25832ed9c6274cd9435d6574b07bec838b42c6a782367e",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "ADYIZW50cnlfaWRERi0wMDAwMDIQcmVnaXN0cnlfdmVyc2lvbhEKcmVzZWFyY2hlctQCMHgwODM5YTZkZGNlYzdhYTVlNjAyODQ5MDI2NmQ2ZDNlZmFiZTMxNmI1EHJlc29sdXRpb25faW5kZXgRDHJld2FyZF91bml0c6EBBnN0YXR1c3RBQ0NFUFRFRF9OT1ZFTA==",
+        "status": "return",
+        "payload": {
+          "raw": [
+            54,
+            8,
+            101,
+            110,
+            116,
+            114,
+            121,
+            95,
+            105,
+            100,
+            68,
+            70,
+            45,
+            48,
+            48,
+            48,
+            48,
+            48,
+            50,
+            16,
+            114,
+            101,
+            103,
+            105,
+            115,
+            116,
+            114,
+            121,
+            95,
+            118,
+            101,
+            114,
+            115,
+            105,
+            111,
+            110,
+            17,
+            10,
+            114,
+            101,
+            115,
+            101,
+            97,
+            114,
+            99,
+            104,
+            101,
+            114,
+            212,
+            2,
+            48,
+            120,
+            48,
+            56,
+            51,
+            57,
+            97,
+            54,
+            100,
+            100,
+            99,
+            101,
+            99,
+            55,
+            97,
+            97,
+            53,
+            101,
+            54,
+            48,
+            50,
+            56,
+            52,
+            57,
+            48,
+            50,
+            54,
+            54,
+            100,
+            54,
+            100,
+            51,
+            101,
+            102,
+            97,
+            98,
+            101,
+            51,
+            49,
+            54,
+            98,
+            53,
+            16,
+            114,
+            101,
+            115,
+            111,
+            108,
+            117,
+            116,
+            105,
+            111,
+            110,
+            95,
+            105,
+            110,
+            100,
+            101,
+            120,
+            17,
+            12,
+            114,
+            101,
+            119,
+            97,
+            114,
+            100,
+            95,
+            117,
+            110,
+            105,
+            116,
+            115,
+            161,
+            1,
+            6,
+            115,
+            116,
+            97,
+            116,
+            117,
+            115,
+            116,
+            65,
+            67,
+            67,
+            69,
+            80,
+            84,
+            69,
+            68,
+            95,
+            78,
+            79,
+            86,
+            69,
+            76
+          ],
+          "readable": "{\"entry_id\":\"F-000002\",\"registry_version\":2,\"researcher\":\"0x0839a6ddcec7aa5e6028490266d6d3efabe316b5\",\"resolution_index\":2,\"reward_units\":20,\"status\":\"ACCEPTED_NOVEL\"}"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "AGREE": 3,
+        "DISAGREE": 1,
+        "IDLE": 1
+      }
+    },
+    {
+      "operation": "claim_reward:F1",
+      "hash": "0xf78f90dcf4d512a4ff27709daf0b451bcdfb9eafd137a8688d52fcf2397c09e6",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xf78f90dcf4d512a4ff27709daf0b451bcdfb9eafd137a8688d52fcf2397c09e6",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "APEB",
+        "status": "return",
+        "payload": {
+          "raw": [
+            241,
+            1
+          ],
+          "readable": "30"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    },
+    {
+      "operation": "claim_reward:F3",
+      "hash": "0x3581b8de25338f5900c92ea9e50dc245b62fe1a6e6b6f5772db6536bed3306de",
+      "actor": "0x0839A6DDCeC7aA5E6028490266D6D3EFabE316B5",
+      "submission_status": "SUBMITTED",
+      "expected_failure": false,
+      "expected_failure_label": null,
+      "explorer": "https://explorer-studio.genlayer.com/tx/0x3581b8de25338f5900c92ea9e50dc245b62fe1a6e6b6f5772db6536bed3306de",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "SUCCESS",
+      "leader_result_code": "return",
+      "leader_result": {
+        "raw": "AKEB",
+        "status": "return",
+        "payload": {
+          "raw": [
+            161,
+            1
+          ],
+          "readable": "20"
+        }
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "AGREE": 5
+      }
+    },
+    {
+      "operation": "claim_reward:duplicate_F1",
+      "hash": "0xd74d9d095efb127be0fc387ae8c31f73286da06db0d3aed8d617591065234bc9",
+      "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "submission_status": "SUBMITTED",
+      "expected_failure": true,
+      "expected_failure_label": "reward has already been claimed",
+      "explorer": "https://explorer-studio.genlayer.com/tx/0xd74d9d095efb127be0fc387ae8c31f73286da06db0d3aed8d617591065234bc9",
+      "acceptance_poll_status": "ACCEPTED",
+      "finality_status": "FINALIZED",
+      "leader_execution": "ERROR",
+      "leader_result_code": "rollback",
+      "leader_result": {
+        "raw": "AVtFWFBFQ1RFRF0gcmV3YXJkIGhhcyBhbHJlYWR5IGJlZW4gY2xhaW1lZA==",
+        "status": "rollback",
+        "payload": "[EXPECTED] reward has already been claimed"
+      },
+      "transaction_execution_result": null,
+      "consensus_result": "MAJORITY_AGREE",
+      "rounds": "1",
+      "votes_committed": "5",
+      "votes_revealed": "5",
+      "vote_types": {
+        "IDLE": 2,
+        "AGREE": 3
+      }
+    }
+  ],
+  "readbacks": [
+    {
+      "after": "deploy_campaign",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 0
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_history": {
+          "entries": []
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {}
+      }
+    },
+    {
+      "after": "commit_finding:F1",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 1
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+          "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+          "status": "COMMITTED"
+        }
+      }
+    },
+    {
+      "after": "commit_finding:F2",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 2
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+          "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+          "status": "COMMITTED"
+        }
+      }
+    },
+    {
+      "after": "commit_finding:F3",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+          "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+          "status": "COMMITTED"
+        }
+      }
+    },
+    {
+      "after": "forged_reveal_rejected",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_history": {
+          "entries": []
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "status": "COMMITTED"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "status": "COMMITTED"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "status": "COMMITTED"
+          }
+        }
+      }
+    },
+    {
+      "after": "reveal_finding:F1",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_history": {
+          "entries": []
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "status": "REVEALED"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "status": "COMMITTED"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "status": "COMMITTED"
+          }
+        }
+      }
+    },
+    {
+      "after": "reveal_finding:F2",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_history": {
+          "entries": []
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "status": "REVEALED"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "status": "REVEALED"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "status": "COMMITTED"
+          }
+        }
+      }
+    },
+    {
+      "after": "reveal_finding:F3",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 0,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_history": {
+          "entries": []
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "status": "REVEALED"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "status": "REVEALED"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "status": "REVEALED"
+          }
+        }
+      }
+    },
+    {
+      "after": "resolve_next:F1",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 1,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 1,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [
+            {
+              "accepted_at_registry_version": 1,
+              "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+              "entry_id": "F-000001",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+            }
+          ],
+          "version": 1
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 0
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 70,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 30
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000001",
+            "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "reward_units": 30,
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+            "status": "ACCEPTED_NOVEL"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "status": "REVEALED"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "status": "REVEALED"
+          }
+        }
+      }
+    },
+    {
+      "after": "resolve_next:F2",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 1,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 2,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [
+            {
+              "accepted_at_registry_version": 1,
+              "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+              "entry_id": "F-000001",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+            }
+          ],
+          "version": 1
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 0
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+              "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+              "status": "LINKED_EQUIVALENT",
+              "submission_index": 1
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 70,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 30
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000001",
+            "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "reward_units": 30,
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+            "status": "ACCEPTED_NOVEL"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "F-000001",
+              "novelty": "EQUIVALENT",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_digest": "sha256:6c18d55bc176891263ca7a9e07bbc1dbfe3cf96ba92bcaaff34715938d9e33c8",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:2479722d6fa704cc8c48afd7ca2481b8ad191b0fc7b585f75eb517322e49c194",
+            "linked_entry_id": "F-000001",
+            "registry_version": 1,
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "reward_units": 0,
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+            "status": "LINKED_EQUIVALENT"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "status": "REVEALED"
+          }
+        }
+      }
+    },
+    {
+      "after": "resolve_next:F3",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 2,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 3,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "CLOSED",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [
+            {
+              "accepted_at_registry_version": 1,
+              "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+              "entry_id": "F-000001",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+            },
+            {
+              "accepted_at_registry_version": 2,
+              "assessment_snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "claim": "HTTPX requires Python version 3.9 or newer.",
+              "entry_id": "F-000002",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5"
+            }
+          ],
+          "version": 2
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 0
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+              "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+              "status": "LINKED_EQUIVALENT",
+              "submission_index": 1
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+              "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 2
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 50,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 50
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000001",
+            "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "reward_units": 30,
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+            "status": "ACCEPTED_NOVEL"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "F-000001",
+              "novelty": "EQUIVALENT",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_digest": "sha256:6c18d55bc176891263ca7a9e07bbc1dbfe3cf96ba92bcaaff34715938d9e33c8",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:2479722d6fa704cc8c48afd7ca2481b8ad191b0fc7b585f75eb517322e49c194",
+            "linked_entry_id": "F-000001",
+            "registry_version": 1,
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "reward_units": 0,
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+            "status": "LINKED_EQUIVALENT"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000002",
+            "evidence_digest": "sha256:3f21c48beb519c0503dfc70baf071254739d4bae27a406de8bbb95853b975209",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:c4c15ec221e8013c20a6ce4fca5c915543ba698a4f56f6a32f57097cb9192e98",
+            "registry_version": 1,
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "reward_units": 20,
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+            "status": "ACCEPTED_NOVEL"
+          }
+        }
+      }
+    },
+    {
+      "after": "claim_reward:F1",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 2,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 3,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "CLOSED",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [
+            {
+              "accepted_at_registry_version": 1,
+              "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+              "entry_id": "F-000001",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+            },
+            {
+              "accepted_at_registry_version": 2,
+              "assessment_snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "claim": "HTTPX requires Python version 3.9 or newer.",
+              "entry_id": "F-000002",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5"
+            }
+          ],
+          "version": 2
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 0
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+              "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+              "status": "LINKED_EQUIVALENT",
+              "submission_index": 1
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+              "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 2
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 50,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 30,
+          "refunded_units": 0,
+          "reserved_units": 20
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000001",
+            "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "reward_claimed": true,
+            "reward_units": 30,
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+            "status": "ACCEPTED_NOVEL"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "F-000001",
+              "novelty": "EQUIVALENT",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_digest": "sha256:6c18d55bc176891263ca7a9e07bbc1dbfe3cf96ba92bcaaff34715938d9e33c8",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:2479722d6fa704cc8c48afd7ca2481b8ad191b0fc7b585f75eb517322e49c194",
+            "linked_entry_id": "F-000001",
+            "registry_version": 1,
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "reward_units": 0,
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+            "status": "LINKED_EQUIVALENT"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000002",
+            "evidence_digest": "sha256:3f21c48beb519c0503dfc70baf071254739d4bae27a406de8bbb95853b975209",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:c4c15ec221e8013c20a6ce4fca5c915543ba698a4f56f6a32f57097cb9192e98",
+            "registry_version": 1,
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "reward_units": 20,
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+            "status": "ACCEPTED_NOVEL"
+          }
+        }
+      }
+    },
+    {
+      "after": "claim_reward:F3",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 2,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 3,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "CLOSED",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [
+            {
+              "accepted_at_registry_version": 1,
+              "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+              "entry_id": "F-000001",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+            },
+            {
+              "accepted_at_registry_version": 2,
+              "assessment_snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "claim": "HTTPX requires Python version 3.9 or newer.",
+              "entry_id": "F-000002",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5"
+            }
+          ],
+          "version": 2
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 0
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+              "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+              "status": "LINKED_EQUIVALENT",
+              "submission_index": 1
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+              "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 2
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 50,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 50,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000001",
+            "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "reward_claimed": true,
+            "reward_units": 30,
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+            "status": "ACCEPTED_NOVEL"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "F-000001",
+              "novelty": "EQUIVALENT",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_digest": "sha256:6c18d55bc176891263ca7a9e07bbc1dbfe3cf96ba92bcaaff34715938d9e33c8",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:2479722d6fa704cc8c48afd7ca2481b8ad191b0fc7b585f75eb517322e49c194",
+            "linked_entry_id": "F-000001",
+            "registry_version": 1,
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "reward_units": 0,
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+            "status": "LINKED_EQUIVALENT"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000002",
+            "evidence_digest": "sha256:3f21c48beb519c0503dfc70baf071254739d4bae27a406de8bbb95853b975209",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:c4c15ec221e8013c20a6ce4fca5c915543ba698a4f56f6a32f57097cb9192e98",
+            "registry_version": 1,
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "reward_claimed": true,
+            "reward_units": 20,
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+            "status": "ACCEPTED_NOVEL"
+          }
+        }
+      }
+    },
+    {
+      "after": "duplicate_reward_rejected",
+      "state": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-registry-2026-10-12",
+          "commit_deadline": "2026-10-12T04:55:01Z",
+          "evidence_standards": [
+            {
+              "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+              "id": "explicit_primary_source"
+            }
+          ],
+          "registry_version": 2,
+          "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+          "resolution_index": 3,
+          "reveal_deadline": "2026-10-12T05:02:01Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            },
+            {
+              "ordinal": 3,
+              "reward_units": 10
+            }
+          ],
+          "status": "CLOSED",
+          "submission_count": 3
+        },
+        "get_registry": {
+          "findings": [
+            {
+              "accepted_at_registry_version": 1,
+              "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+              "entry_id": "F-000001",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+            },
+            {
+              "accepted_at_registry_version": 2,
+              "assessment_snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "claim": "HTTPX requires Python version 3.9 or newer.",
+              "entry_id": "F-000002",
+              "evidence_refs": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5"
+            }
+          ],
+          "version": 2
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 0
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+              "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+              "status": "LINKED_EQUIVALENT",
+              "submission_index": 1
+            },
+            {
+              "registry_version": 1,
+              "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+              "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+              "status": "ACCEPTED_NOVEL",
+              "submission_index": 2
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 50,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 50,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "get_submission": {
+          "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+            "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000001",
+            "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "reward_claimed": true,
+            "reward_units": 30,
+            "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+            "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+            "status": "ACCEPTED_NOVEL"
+          },
+          "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "F-000001",
+              "novelty": "EQUIVALENT",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+            "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "evidence_digest": "sha256:6c18d55bc176891263ca7a9e07bbc1dbfe3cf96ba92bcaaff34715938d9e33c8",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:2479722d6fa704cc8c48afd7ca2481b8ad191b0fc7b585f75eb517322e49c194",
+            "linked_entry_id": "F-000001",
+            "registry_version": 1,
+            "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+            "reward_units": 0,
+            "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+            "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+            "status": "LINKED_EQUIVALENT"
+          },
+          "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+            "assessment": {
+              "citations": [
+                "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+              ],
+              "nearest_entry_id": "",
+              "novelty": "NOVEL",
+              "sources": [
+                {
+                  "byte_count": 4944,
+                  "status": "fetched",
+                  "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+                }
+              ],
+              "support": "SUPPORTED"
+            },
+            "campaign_id": "httpx-registry-2026-10-12",
+            "claim": "HTTPX requires Python version 3.9 or newer.",
+            "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+            "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+            "entry_id": "F-000002",
+            "evidence_digest": "sha256:3f21c48beb519c0503dfc70baf071254739d4bae27a406de8bbb95853b975209",
+            "evidence_refs": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "input_snapshot_digest": "sha256:c4c15ec221e8013c20a6ce4fca5c915543ba698a4f56f6a32f57097cb9192e98",
+            "registry_version": 1,
+            "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+            "reward_claimed": true,
+            "reward_units": 20,
+            "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+            "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+            "status": "ACCEPTED_NOVEL"
+          }
+        }
+      }
+    }
+  ],
+  "demo_result": "PASS",
+  "preflight_attempt": {
+    "schema_version": "2.0",
+    "release_date": "2026-10-12",
+    "timezone": "Africa/Lagos",
+    "network": {
+      "name": "StudioNet",
+      "chain_id": 61999,
+      "rpc": "https://studio.genlayer.com/api",
+      "portal_used": false
+    },
+    "transactions": [
+      {
+        "operation": "deploy_campaign",
+        "hash": "0xeac058547933a524eb30b1a7e47fa1143c95c473abe03aeac44ad719b9b4449c",
+        "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+        "submission_status": "SUBMITTED",
+        "expected_failure": false,
+        "expected_failure_label": null,
+        "explorer": "https://explorer-studio.genlayer.com/tx/0xeac058547933a524eb30b1a7e47fa1143c95c473abe03aeac44ad719b9b4449c",
+        "acceptance_poll_status": "ACCEPTED",
+        "finality_status": "FINALIZED",
+        "leader_execution": "SUCCESS",
+        "leader_result_code": "return",
+        "leader_result": {
+          "raw": "AAA=",
+          "status": "return",
+          "payload": {
+            "raw": [
+              0
+            ],
+            "readable": "null"
+          }
+        },
+        "transaction_execution_result": null,
+        "consensus_result": "MAJORITY_AGREE",
+        "rounds": "1",
+        "votes_committed": "5",
+        "votes_revealed": "5",
+        "vote_types": {
+          "AGREE": 4,
+          "IDLE": 1
+        }
+      },
+      {
+        "operation": "commit_finding:F1",
+        "hash": "0x74b13ee81fa7b2c916ad1c1d15652bc48435cdda20e47a8cb50377c155c445fd",
+        "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+        "submission_status": "SUBMITTED",
+        "expected_failure": false,
+        "expected_failure_label": null,
+        "explorer": "https://explorer-studio.genlayer.com/tx/0x74b13ee81fa7b2c916ad1c1d15652bc48435cdda20e47a8cb50377c155c445fd",
+        "acceptance_poll_status": "ACCEPTED",
+        "finality_status": "FINALIZED",
+        "leader_execution": "ERROR",
+        "leader_result_code": "contract_error",
+        "leader_result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        },
+        "transaction_execution_result": null,
+        "consensus_result": "MAJORITY_AGREE",
+        "rounds": "1",
+        "votes_committed": "5",
+        "votes_revealed": "5",
+        "vote_types": {
+          "IDLE": 2,
+          "AGREE": 3
+        }
+      }
+    ],
+    "readbacks": [
+      {
+        "after": "deploy_campaign",
+        "state": {
+          "get_campaign": {
+            "budget_units": 100,
+            "campaign_id": "httpx-registry-2026-10-12",
+            "commit_deadline": "2026-10-12T04:47:30Z",
+            "evidence_standards": [
+              {
+                "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+                "id": "explicit_primary_source"
+              }
+            ],
+            "registry_version": 0,
+            "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+            "resolution_index": 0,
+            "reveal_deadline": "2026-10-12T04:54:30Z",
+            "reward_schedule": [
+              {
+                "ordinal": 1,
+                "reward_units": 30
+              },
+              {
+                "ordinal": 2,
+                "reward_units": 20
+              },
+              {
+                "ordinal": 3,
+                "reward_units": 10
+              }
+            ],
+            "status": "OPEN",
+            "submission_count": 0
+          },
+          "get_registry": {
+            "findings": [],
+            "version": 0
+          },
+          "get_history": {
+            "entries": []
+          },
+          "get_accounting": {
+            "available_units": 100,
+            "budget_units": 100,
+            "conserved": true,
+            "paid_units": 0,
+            "refunded_units": 0,
+            "reserved_units": 0
+          }
+        }
+      }
+    ],
+    "demo_result": "STOPPED_ERROR",
+    "project": {
+      "repository": "https://github.com/JWattjr/research-novelty-bounty",
+      "visibility": "PRIVATE",
+      "source_commit": "16366ca27f7cef76587a9f9eb76b4209d991b38b",
+      "source_path": "contracts/research_novelty_bounty.py",
+      "source_git_blob_sha1": "24f020a27a2fa6884b4e4de41f90bfc98b52e169",
+      "source_bytes": 32632
+    },
+    "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+    "diagnosis": {
+      "old_address": "0x73688bF4D29240503D1Db71e26Ed618b4c06Aad8",
+      "old_readback": {
+        "get_campaign": {
+          "budget_units": 100,
+          "campaign_id": "httpx-client-modes-2026-09-28",
+          "commit_deadline": "2026-09-27T23:54:48Z",
+          "evidence_standards": [
+            {
+              "description": "The finding is supported by a pinned source published by the HTTPX upstream project.",
+              "id": "primary_source"
+            },
+            {
+              "description": "The finding accurately names the HTTPX client interfaces and the request mode each documents.",
+              "id": "api_mapping"
+            }
+          ],
+          "registry_version": 0,
+          "research_question": "Which public HTTPX interfaces document synchronous and asynchronous Python requests?",
+          "resolution_index": 1,
+          "reveal_deadline": "2026-09-27T23:59:48Z",
+          "reward_schedule": [
+            {
+              "ordinal": 1,
+              "reward_units": 30
+            },
+            {
+              "ordinal": 2,
+              "reward_units": 20
+            }
+          ],
+          "status": "OPEN",
+          "submission_count": 2
+        },
+        "get_registry": {
+          "findings": [],
+          "version": 0
+        },
+        "get_submission": {
+          "assessment": {
+            "citations": [
+              "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            ],
+            "nearest_entry_id": "",
+            "novelty": "NOVEL",
+            "support": "UNCERTAIN"
+          },
+          "campaign_id": "httpx-client-modes-2026-09-28",
+          "claim": "HTTPX documents Client for synchronous requests and AsyncClient for asynchronous requests.",
+          "commitment_hash": "sha256:c940867942cee74c74f719cd60eb955f6ad3243f6b435d3d08bd58671eb95100",
+          "contract_address": "0x73688bf4d29240503d1db71e26ed618b4c06aad8",
+          "evidence_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+          "evidence_refs": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "input_snapshot_digest": "sha256:a68aa7ccdb0f0960676d6d55186e3ceb233776d93221a9e763b2f7b418daa697",
+          "registry_version": 0,
+          "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+          "salt": "5577951701e7cd2ac003ee50981a1f74",
+          "snapshot_digest": "sha256:3c33d06d90003363ce1e3f856967ddd0e0128d89c314a33854cb7cd0e27af7b0",
+          "status": "UNCERTAIN"
+        },
+        "get_history": {
+          "entries": [
+            {
+              "registry_version": 0,
+              "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+              "snapshot_digest": "sha256:3c33d06d90003363ce1e3f856967ddd0e0128d89c314a33854cb7cd0e27af7b0",
+              "status": "UNCERTAIN",
+              "submission_index": 0
+            }
+          ]
+        },
+        "get_accounting": {
+          "available_units": 100,
+          "budget_units": 100,
+          "conserved": true,
+          "paid_units": 0,
+          "refunded_units": 0,
+          "reserved_units": 0
+        },
+        "scope_note": "The contract has no get_state method; all available public state views are included."
+      },
+      "curl_measurement": "200 4944",
+      "raw_bytes": 4944,
+      "raw_sha256": "d58f476c1273c9c06c978467c6596620d3840ea8c99ba9d32300ab3286f0e0c3",
+      "valid_utf8": true,
+      "old_evidence_digest_reproduced_from_full_raw_body": true,
+      "reproduced_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+      "stored_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+      "diagnosis": "The full fetched body can be checked by digest reproduction. The README never names Client or AsyncClient; the API-mapping claim was stronger than the supplied text. No truncation code exists. Old views lack per-source availability.",
+      "supporting_lines": [
+        {
+          "line": 16,
+          "text": "HTTPX is a fully featured HTTP client library for Python 3. It includes **an integrated command line client**, has support for both **HTTP/1.1 and HTTP/2**, and provides both **sync and async APIs**."
+        },
+        {
+          "line": 65,
+          "text": "* HTTP/1.1 [and HTTP/2 support](https://www.python-httpx.org/http2/)."
+        },
+        {
+          "line": 104,
+          "text": "HTTPX requires Python 3.9+."
+        }
+      ]
+    },
+    "verification": {
+      "pytest": "16 passed",
+      "lint": "PASS; 3 AST checks and SDK validation"
+    },
+    "constructor": {
+      "constructor_args": [
+        "httpx-registry-2026-10-12",
+        "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+        "[{\"id\":\"explicit_primary_source\",\"description\":\"The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.\"}]",
+        "[{\"ordinal\":1,\"reward_units\":30},{\"ordinal\":2,\"reward_units\":20},{\"ordinal\":3,\"reward_units\":10}]",
+        100,
+        "2026-10-12T04:47:30Z",
+        "2026-10-12T04:54:30Z"
+      ],
+      "commit_deadline_utc": "2026-10-12T04:47:30Z",
+      "reveal_deadline_utc": "2026-10-12T04:54:30Z",
+      "deployment_chain_time_utc": "2026-10-12T04:39:30Z"
+    },
+    "evidence_source": {
+      "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md",
+      "raw_bytes": 4944,
+      "valid_utf8": true,
+      "curl_measurement": "200 4944",
+      "cap_bytes": 5000,
+      "supporting_lines": [
+        {
+          "line": 16,
+          "text": "HTTPX is a fully featured HTTP client library for Python 3. It includes **an integrated command line client**, has support for both **HTTP/1.1 and HTTP/2**, and provides both **sync and async APIs**."
+        },
+        {
+          "line": 65,
+          "text": "* HTTP/1.1 [and HTTP/2 support](https://www.python-httpx.org/http2/)."
+        },
+        {
+          "line": 104,
+          "text": "HTTPX requires Python 3.9+."
+        }
+      ]
+    },
+    "researchers": [
+      {
+        "finding": "F1",
+        "address": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+        "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "salt": "2f89faf5cf9f3be03b9b9386350cd6f3",
+        "commitment": "sha256:b5e60d06382c8c1a7d219a71264ef2cb4bca049a440d16fd090afbcc515f99ca",
+        "evidence_refs_json": "[\"https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md\"]"
+      },
+      {
+        "finding": "F2",
+        "address": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+        "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "salt": "cd3af362b86c92a9cb77f84dcad24ea9"
+      },
+      {
+        "finding": "F3",
+        "address": "0x0839A6DDCeC7aA5E6028490266D6D3EFabE316B5",
+        "claim": "HTTPX requires Python version 3.9 or newer.",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "salt": "87e6364e4a281403e3aa6fc0e3f1e748"
+      }
+    ],
+    "contract_address": "0x5740f66a146118A3b9Cd367EE4BeaC9B9897Bb47",
+    "onchain_source_matches_git_blob": true,
+    "deployed_source_git_blob_sha1": "24f020a27a2fa6884b4e4de41f90bfc98b52e169",
+    "read_client_note": "Python SDK read serialization failed; CLI/JS read client succeeded. Continue same deployment; no replacement transaction.",
+    "prior_read_error": "gen_call failed (code=-32000): execution failed",
+    "error": "commit_finding:F1 unexpected execution: {'operation': 'commit_finding:F1', 'hash': '0x74b13ee81fa7b2c916ad1c1d15652bc48435cdda20e47a8cb50377c155c445fd', 'actor': '0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92', 'submission_status': 'SUBMITTED', 'expected_failure': False, 'expected_failure_label': None, 'explorer': 'https://explorer-studio.genlayer.com/tx/0x74b13ee81fa7b2c916ad1c1d15652bc48435cdda20e47a8cb50377c155c445fd', 'acceptance_poll_status': 'ACCEPTED', 'finality_status': 'FINALIZED', 'leader_execution': 'ERROR', 'leader_result_code': 'contract_error', 'leader_result': {'raw': 'AmV4aXRfY29kZSAx', 'status': 'contract_error', 'payload': 'exit_code 1'}, 'transaction_execution_result': None, 'consensus_result': 'MAJORITY_AGREE', 'rounds': '1', 'votes_committed': '5', 'votes_revealed': '5', 'vote_types': {'IDLE': 2, 'AGREE': 3}}",
+    "abort_reason": "Installed SDK used empty-string method key, incompatible with pinned runner. Failed commit never reached contract logic. No judgments occurred. Replaced only campaign timing after fixing client harness."
+  },
+  "client_compatibility_fix": "Pinned runner dispatch expects method; installed Python SDK encoded it as empty-string key. Harness uses the legacy method key for calls and writes. The first failed commit did not execute contract logic; no judgment was retried.",
+  "project": {
+    "repository": "https://github.com/JWattjr/research-novelty-bounty",
+    "visibility": "PRIVATE",
+    "source_commit": "16366ca27f7cef76587a9f9eb76b4209d991b38b",
+    "source_path": "contracts/research_novelty_bounty.py",
+    "source_git_blob_sha1": "24f020a27a2fa6884b4e4de41f90bfc98b52e169",
+    "source_bytes": 32632
+  },
+  "runner": "py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6",
+  "diagnosis": {
+    "old_address": "0x73688bF4D29240503D1Db71e26Ed618b4c06Aad8",
+    "old_readback": {
+      "get_campaign": {
+        "budget_units": 100,
+        "campaign_id": "httpx-client-modes-2026-09-28",
+        "commit_deadline": "2026-09-27T23:54:48Z",
+        "evidence_standards": [
+          {
+            "description": "The finding is supported by a pinned source published by the HTTPX upstream project.",
+            "id": "primary_source"
+          },
+          {
+            "description": "The finding accurately names the HTTPX client interfaces and the request mode each documents.",
+            "id": "api_mapping"
+          }
+        ],
+        "registry_version": 0,
+        "research_question": "Which public HTTPX interfaces document synchronous and asynchronous Python requests?",
+        "resolution_index": 1,
+        "reveal_deadline": "2026-09-27T23:59:48Z",
+        "reward_schedule": [
+          {
+            "ordinal": 1,
+            "reward_units": 30
+          },
+          {
+            "ordinal": 2,
+            "reward_units": 20
+          }
+        ],
+        "status": "OPEN",
+        "submission_count": 2
+      },
+      "get_registry": {
+        "findings": [],
+        "version": 0
+      },
+      "get_submission": {
+        "assessment": {
+          "citations": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "nearest_entry_id": "",
+          "novelty": "NOVEL",
+          "support": "UNCERTAIN"
+        },
+        "campaign_id": "httpx-client-modes-2026-09-28",
+        "claim": "HTTPX documents Client for synchronous requests and AsyncClient for asynchronous requests.",
+        "commitment_hash": "sha256:c940867942cee74c74f719cd60eb955f6ad3243f6b435d3d08bd58671eb95100",
+        "contract_address": "0x73688bf4d29240503d1db71e26ed618b4c06aad8",
+        "evidence_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "input_snapshot_digest": "sha256:a68aa7ccdb0f0960676d6d55186e3ceb233776d93221a9e763b2f7b418daa697",
+        "registry_version": 0,
+        "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+        "salt": "5577951701e7cd2ac003ee50981a1f74",
+        "snapshot_digest": "sha256:3c33d06d90003363ce1e3f856967ddd0e0128d89c314a33854cb7cd0e27af7b0",
+        "status": "UNCERTAIN"
+      },
+      "get_history": {
+        "entries": [
+          {
+            "registry_version": 0,
+            "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+            "snapshot_digest": "sha256:3c33d06d90003363ce1e3f856967ddd0e0128d89c314a33854cb7cd0e27af7b0",
+            "status": "UNCERTAIN",
+            "submission_index": 0
+          }
+        ]
+      },
+      "get_accounting": {
+        "available_units": 100,
+        "budget_units": 100,
+        "conserved": true,
+        "paid_units": 0,
+        "refunded_units": 0,
+        "reserved_units": 0
+      },
+      "scope_note": "The contract has no get_state method; all available public state views are included."
+    },
+    "curl_measurement": "200 4944",
+    "raw_bytes": 4944,
+    "raw_sha256": "d58f476c1273c9c06c978467c6596620d3840ea8c99ba9d32300ab3286f0e0c3",
+    "valid_utf8": true,
+    "old_evidence_digest_reproduced_from_full_raw_body": true,
+    "reproduced_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+    "stored_digest": "sha256:234bc1fd24bdee132518c75578be7d1a001541a00ee8dccb09fdcde175b50c0d",
+    "diagnosis": "The full fetched body can be checked by digest reproduction. The README never names Client or AsyncClient; the API-mapping claim was stronger than the supplied text. No truncation code exists. Old views lack per-source availability.",
+    "supporting_lines": [
+      {
+        "line": 16,
+        "text": "HTTPX is a fully featured HTTP client library for Python 3. It includes **an integrated command line client**, has support for both **HTTP/1.1 and HTTP/2**, and provides both **sync and async APIs**."
+      },
+      {
+        "line": 65,
+        "text": "* HTTP/1.1 [and HTTP/2 support](https://www.python-httpx.org/http2/)."
+      },
+      {
+        "line": 104,
+        "text": "HTTPX requires Python 3.9+."
+      }
+    ],
+    "readback_provenance": "Saved 2026-09-28 finalized read-back. A fresh historical get_campaign call returned gen_call execution failed; digest reproduction uses the saved input/evidence digests and freshly downloaded pinned raw bytes."
+  },
+  "verification": {
+    "pytest": "16 passed",
+    "lint": "PASS; 3 AST checks and SDK validation",
+    "fresh_final_readback_matches_recorded": true,
+    "fresh_source_matches_pushed_git_blob": true,
+    "checked_at_utc": "2026-10-12T09:15:58.446009+00:00",
+    "command_count_at_verification": 401
+  },
+  "constructor": {
+    "constructor_args": [
+      "httpx-registry-2026-10-12",
+      "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+      "[{\"id\":\"explicit_primary_source\",\"description\":\"The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.\"}]",
+      "[{\"ordinal\":1,\"reward_units\":30},{\"ordinal\":2,\"reward_units\":20},{\"ordinal\":3,\"reward_units\":10}]",
+      100,
+      "2026-10-12T04:55:01Z",
+      "2026-10-12T05:02:01Z"
+    ],
+    "commit_deadline_utc": "2026-10-12T04:55:01Z",
+    "reveal_deadline_utc": "2026-10-12T05:02:01Z",
+    "deployment_chain_time_utc": "2026-10-12T04:47:01Z"
+  },
+  "evidence_source": {
+    "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md",
+    "raw_bytes": 4944,
+    "valid_utf8": true,
+    "curl_measurement": "200 4944",
+    "cap_bytes": 5000,
+    "supporting_lines": [
+      {
+        "line": 16,
+        "text": "HTTPX is a fully featured HTTP client library for Python 3. It includes **an integrated command line client**, has support for both **HTTP/1.1 and HTTP/2**, and provides both **sync and async APIs**."
+      },
+      {
+        "line": 65,
+        "text": "* HTTP/1.1 [and HTTP/2 support](https://www.python-httpx.org/http2/)."
+      },
+      {
+        "line": 104,
+        "text": "HTTPX requires Python 3.9+."
+      }
+    ]
+  },
+  "researchers": [
+    {
+      "finding": "F1",
+      "address": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+      "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+      "evidence_refs": [
+        "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+      ],
+      "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+      "commitment": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+      "evidence_refs_json": "[\"https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md\"]"
+    },
+    {
+      "finding": "F2",
+      "address": "0x2C8EB5dB1105A85BE66BadafeD88D10cF393CDD8",
+      "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+      "evidence_refs": [
+        "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+      ],
+      "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+      "commitment": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+      "evidence_refs_json": "[\"https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md\"]"
+    },
+    {
+      "finding": "F3",
+      "address": "0x0839A6DDCeC7aA5E6028490266D6D3EFabE316B5",
+      "claim": "HTTPX requires Python version 3.9 or newer.",
+      "evidence_refs": [
+        "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+      ],
+      "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+      "commitment": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+      "evidence_refs_json": "[\"https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md\"]"
+    }
+  ],
+  "contract_address": "0x6B196Eb251Ce4Ae84dF4A186bE197cc648d060D9",
+  "onchain_source_matches_git_blob": true,
+  "deployed_source_git_blob_sha1": "24f020a27a2fa6884b4e4de41f90bfc98b52e169",
+  "final_onchain_readback": {
+    "get_campaign": {
+      "budget_units": 100,
+      "campaign_id": "httpx-registry-2026-10-12",
+      "commit_deadline": "2026-10-12T04:55:01Z",
+      "evidence_standards": [
+        {
+          "description": "The claim must be explicitly stated in the supplied pinned HTTPX upstream README; do not follow links or use prior knowledge.",
+          "id": "explicit_primary_source"
+        }
+      ],
+      "registry_version": 2,
+      "research_question": "Which HTTP protocol support and Python runtime requirement are explicitly documented by the pinned HTTPX README?",
+      "resolution_index": 3,
+      "reveal_deadline": "2026-10-12T05:02:01Z",
+      "reward_schedule": [
+        {
+          "ordinal": 1,
+          "reward_units": 30
+        },
+        {
+          "ordinal": 2,
+          "reward_units": 20
+        },
+        {
+          "ordinal": 3,
+          "reward_units": 10
+        }
+      ],
+      "status": "CLOSED",
+      "submission_count": 3
+    },
+    "get_registry": {
+      "findings": [
+        {
+          "accepted_at_registry_version": 1,
+          "assessment_snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+          "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+          "entry_id": "F-000001",
+          "evidence_refs": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92"
+        },
+        {
+          "accepted_at_registry_version": 2,
+          "assessment_snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+          "claim": "HTTPX requires Python version 3.9 or newer.",
+          "entry_id": "F-000002",
+          "evidence_refs": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5"
+        }
+      ],
+      "version": 2
+    },
+    "get_history": {
+      "entries": [
+        {
+          "registry_version": 0,
+          "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+          "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+          "status": "ACCEPTED_NOVEL",
+          "submission_index": 0
+        },
+        {
+          "registry_version": 1,
+          "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+          "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+          "status": "LINKED_EQUIVALENT",
+          "submission_index": 1
+        },
+        {
+          "registry_version": 1,
+          "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+          "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+          "status": "ACCEPTED_NOVEL",
+          "submission_index": 2
+        }
+      ]
+    },
+    "get_accounting": {
+      "available_units": 50,
+      "budget_units": 100,
+      "conserved": true,
+      "paid_units": 50,
+      "refunded_units": 0,
+      "reserved_units": 0
+    },
+    "get_submission": {
+      "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92": {
+        "assessment": {
+          "citations": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "nearest_entry_id": "",
+          "novelty": "NOVEL",
+          "sources": [
+            {
+              "byte_count": 4944,
+              "status": "fetched",
+              "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            }
+          ],
+          "support": "SUPPORTED"
+        },
+        "campaign_id": "httpx-registry-2026-10-12",
+        "claim": "HTTPX supports both HTTP/1.1 and HTTP/2.",
+        "commitment_hash": "sha256:08206bb371fc2acc7269eab86154a4215c6b2820c476c9ad150e6a3766927093",
+        "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+        "entry_id": "F-000001",
+        "evidence_digest": "sha256:7701c2113ad266f5a30b35c5114dfd908196fa62bd4f449992681d97e1153fdb",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "input_snapshot_digest": "sha256:524d19f6814c1da2ba5257a0be32d306d6d01dc31264bc0060150e7c9f982fd1",
+        "registry_version": 0,
+        "researcher": "0xdb433ff614bdd1ece21aa97221c3e0a7ecf79c92",
+        "reward_claimed": true,
+        "reward_units": 30,
+        "salt": "699dfdc0a7c97f57fb261530a159ffc6",
+        "snapshot_digest": "sha256:4c8700c03fe607474250b87e9e50ab0d3bdf2e7e9ae146efb7e868c4361899eb",
+        "status": "ACCEPTED_NOVEL"
+      },
+      "0x2c8eb5db1105a85be66badafed88d10cf393cdd8": {
+        "assessment": {
+          "citations": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "nearest_entry_id": "F-000001",
+          "novelty": "EQUIVALENT",
+          "sources": [
+            {
+              "byte_count": 4944,
+              "status": "fetched",
+              "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            }
+          ],
+          "support": "SUPPORTED"
+        },
+        "campaign_id": "httpx-registry-2026-10-12",
+        "claim": "The HTTPX library has support for HTTP/2 as well as HTTP/1.1.",
+        "commitment_hash": "sha256:839ab078088f1f449edf632bc6ec070256dd12e12eae6d3c4950fb3164cf06d5",
+        "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+        "evidence_digest": "sha256:6c18d55bc176891263ca7a9e07bbc1dbfe3cf96ba92bcaaff34715938d9e33c8",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "input_snapshot_digest": "sha256:2479722d6fa704cc8c48afd7ca2481b8ad191b0fc7b585f75eb517322e49c194",
+        "linked_entry_id": "F-000001",
+        "registry_version": 1,
+        "researcher": "0x2c8eb5db1105a85be66badafed88d10cf393cdd8",
+        "reward_units": 0,
+        "salt": "fc4ad6ba507464cf136af55c42d6f1d5",
+        "snapshot_digest": "sha256:c0f5e49df4cce3f3498ad949f0e1f73daa9d0e09825fd276c284acb1be2601f6",
+        "status": "LINKED_EQUIVALENT"
+      },
+      "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5": {
+        "assessment": {
+          "citations": [
+            "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+          ],
+          "nearest_entry_id": "",
+          "novelty": "NOVEL",
+          "sources": [
+            {
+              "byte_count": 4944,
+              "status": "fetched",
+              "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+            }
+          ],
+          "support": "SUPPORTED"
+        },
+        "campaign_id": "httpx-registry-2026-10-12",
+        "claim": "HTTPX requires Python version 3.9 or newer.",
+        "commitment_hash": "sha256:1605bcf5ae2b747e8c2b59156e5ef3dcf8568503f49ac0040abcbaa018ea366b",
+        "contract_address": "0x6b196eb251ce4ae84df4a186be197cc648d060d9",
+        "entry_id": "F-000002",
+        "evidence_digest": "sha256:3f21c48beb519c0503dfc70baf071254739d4bae27a406de8bbb95853b975209",
+        "evidence_refs": [
+          "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md"
+        ],
+        "input_snapshot_digest": "sha256:c4c15ec221e8013c20a6ce4fca5c915543ba698a4f56f6a32f57097cb9192e98",
+        "registry_version": 1,
+        "researcher": "0x0839a6ddcec7aa5e6028490266d6d3efabe316b5",
+        "reward_claimed": true,
+        "reward_units": 20,
+        "salt": "00777cbe4a7312e5d8428d5c721d6da9",
+        "snapshot_digest": "sha256:f6abf96b19e1f11eb62f2e03afdca017277cd32ea85fd23544be132d08837ce2",
+        "status": "ACCEPTED_NOVEL"
+      }
+    }
+  },
+  "toolchain": {
+    "genlayer-py": "0.19.0rc2",
+    "genlayer-test": "0.30.0rc2",
+    "genvm-linter": "0.11.1rc2"
+  },
+  "self_review": {
+    "technical": {
+      "gate": "PASS",
+      "basis": "16 mocked direct tests pass; GenVM lint and SDK validation pass; deployed source equals the pushed commit blob byte-for-byte. All 14 demo transactions reached ACCEPTED then FINALIZED, with 12 leader SUCCESS and two labeled expected ERROR outcomes; read-backs and votes recorded."
+    },
+    "distinctiveness": {
+      "gate": "PASS",
+      "basis": "Closest accepted match is Specification Bid Auction. Commit/reveal is shared plumbing; this contract serially changes a versioned novelty registry between judgments and suppresses a second reward for equivalent findings."
+    },
+    "evidence": {
+      "gate": "PASS",
+      "basis": "Live F1 acceptance, F2 equivalent link without reward, F3 novelty against version one, forged reveal rejection, and duplicate reward rejection are required. See transactions and readbacks for actual completed steps."
+    },
+    "verdict": "READY FOR MANUAL SUBMISSION AFTER PUBLIC RELEASE",
+    "unverified": [
+      "Real reward custody, token/native-value transfer, and payment fulfillment; rewards are synthetic units.",
+      "Ecosystem-wide originality and global research novelty.",
+      "Long-term source availability, model robustness, adversarial campaigns and production-scale operation.",
+      "Unanimous model agreement: F3 passed by majority with one dissenting validator."
+    ]
+  },
+  "deployment_transaction": {
+    "operation": "deploy_campaign",
+    "hash": "0x8edcf5cddd6400466ffc81b07d5dcfb5479a24c1c3a71c52cd59eb3b9a0e69c1",
+    "actor": "0xdB433ff614bDD1ecE21Aa97221C3E0a7ecf79c92",
+    "submission_status": "SUBMITTED",
+    "expected_failure": false,
+    "expected_failure_label": null,
+    "explorer": "https://explorer-studio.genlayer.com/tx/0x8edcf5cddd6400466ffc81b07d5dcfb5479a24c1c3a71c52cd59eb3b9a0e69c1",
+    "acceptance_poll_status": "ACCEPTED",
+    "finality_status": "FINALIZED",
+    "leader_execution": "SUCCESS",
+    "leader_result_code": "return",
+    "leader_result": {
+      "raw": "AAA=",
+      "status": "return",
+      "payload": {
+        "raw": [
+          0
+        ],
+        "readable": "null"
+      }
+    },
+    "transaction_execution_result": null,
+    "consensus_result": "MAJORITY_AGREE",
+    "rounds": "1",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "vote_types": {
+      "IDLE": 1,
+      "AGREE": 4
+    }
+  },
+  "command_log": "deployments/studionet-commands-2026-10-12.jsonl",
+  "command_log_supplement": "deployments/studionet-command-bootstrap-2026-10-12.md",
+  "repository_visibility": "PRIVATE",
+  "consensus_qualification": "F3 resolution finalized with MAJORITY_AGREE: 3 AGREE, 1 DISAGREE, 1 IDLE. It was not unanimous. No judgment was retried.",
+  "portal_note": "Research Novelty Bounty maintains a versioned novelty registry: each supported novel finding is accepted once and becomes context for the next judgment. The StudioNet demo shows F1 rewarded, its F2 paraphrase linked to F1 with no second reward, and distinct F3 rewarded against the updated registry. It also rejects a forged reveal and a duplicate reward claim. Commit/reveal is shared plumbing with Specification Bid Auction; the distinct mechanism is registry-dependent support and novelty judgment. Source bytes match the pushed commit; receipts separate FINALIZED from execution success. Rewards are synthetic units; this does not prove real custody or payment.",
+  "portal_note_characters": 665,
+  "evidence_list": [
+    {
+      "label": "F1",
+      "operation": "resolve_next:F1",
+      "url": "https://explorer-studio.genlayer.com/tx/0x0c91adb9f51af4f2db4f5d4621f7246615b096826759c294998b902329e128d3",
+      "result": "FINALIZED / SUCCESS"
+    },
+    {
+      "label": "F2",
+      "operation": "resolve_next:F2",
+      "url": "https://explorer-studio.genlayer.com/tx/0x1a979272838be096b076b16cafbf1f03b1c74f3ea567430bbcd5d8282e40fa1a",
+      "result": "FINALIZED / SUCCESS"
+    },
+    {
+      "label": "F3",
+      "operation": "resolve_next:F3",
+      "url": "https://explorer-studio.genlayer.com/tx/0xf89b8f25772d8f30ad25832ed9c6274cd9435d6574b07bec838b42c6a782367e",
+      "result": "FINALIZED / SUCCESS"
+    },
+    {
+      "label": "Expected failure: forged reveal",
+      "operation": "reveal_finding:forged_F3",
+      "url": "https://explorer-studio.genlayer.com/tx/0xe7e0b6ebfc52aa4d61da46d2bcbdf36b5730bbc7680492359dc38215d0b3f2a9",
+      "result": "FINALIZED / ERROR"
+    },
+    {
+      "label": "Expected failure: duplicate reward",
+      "operation": "claim_reward:duplicate_F1",
+      "url": "https://explorer-studio.genlayer.com/tx/0xd74d9d095efb127be0fc387ae8c31f73286da06db0d3aed8d617591065234bc9",
+      "result": "FINALIZED / ERROR"
+    }
+  ]
+}

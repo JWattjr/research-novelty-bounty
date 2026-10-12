@@ -400,5 +400,8 @@
       }
     ],
     "distinctive_contribution": "A serial, versioned campaign registry that rewards supported novel findings once and links equivalent paraphrases to an existing entry without a second reward."
-  }
+  },
+  "release_classification": "HISTORICAL",
+  "superseded_by": "studionet-release-2026-10-12.json",
+  "historical_note": "Preserved uncertain run. Its full 4944-byte fetched evidence body has now been established by exact evidence-digest reproduction; the claim named Client/AsyncClient absent from that README."
 }

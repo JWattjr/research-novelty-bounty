@@ -24,7 +24,7 @@ Direct-mode tests use mocked web and model responses. They execute the contract 
 
 ## Lifecycle
 
-1. The campaign owner freezes the research question, 1–8 evidence standards, ordinal reward schedule, demo budget, and commit/reveal deadlines. The schedule total cannot exceed the budget.
+1. The campaign owner freezes the research question, 1â€“8 evidence standards, ordinal reward schedule, demo budget, and commit/reveal deadlines. The schedule total cannot exceed the budget.
 2. A researcher commits one `sha256:` digest. It binds the contract address, campaign ID, researcher address, claim, evidence URLs, and salt. Only the digest is visible before reveal.
 3. During the reveal window, the researcher reveals the exact claim, references, and salt. The queue preserves commitment transaction order. Unrevealed queue entries expire without blocking later entries.
 4. After the reveal deadline, anyone may call `resolve_next`. Each revealed entry is evaluated against the current bounded registry. The independent validator rechecks support and novelty and must agree on the substantive status vector. The snapshot digest binds the registry version and exact submission.
@@ -39,6 +39,27 @@ Constructor inputs are in [examples/constructor.json](examples/constructor.json)
 
 The prototype allows at most eight commitments, eight standards, eight rewarded registry entries, and three evidence URLs per submission. Evidence URLs must use HTTPS and a public-DNS hostname; bodies must be nonempty UTF-8 and no more than 5,000 bytes. The contract does not authenticate publishers, verify signatures, resolve DNS, or validate document freshness. Fetched text is untrusted prompt input. No available source yields `UNCERTAIN`; malformed consensus output reverts resolution without advancing the queue.
 
-Rewards are synthetic demo units and do not represent a token, native value, or real payment. The first live support judgment finalized as UNCERTAIN; the campaign stopped with one revealed submission unresolved, no registry entry, and no reward. No Portal submission occurred.
+Rewards are synthetic demo units and do not represent a token, native value, or real payment. The 2026-09-28 run is historical. Its complete evidence body was available, but its Client/AsyncClient claim exceeded the README text. The 2026-10-12 release records the new StudioNet attempt and all completed evidence. No Portal submission occurred.
 
 See [mechanism differentiation](docs/MECHANISM_DIFFERENTIATION.md), [test matrix](docs/TEST_MATRIX.md), [security notes](docs/SECURITY_NOTES.md), [demo sequence](examples/demo_sequence.md), and the [submission draft](SUBMISSION_DRAFT.md).
+
+## StudioNet registry demonstration (2026-10-12)
+
+Result: **PASS**. Source commit `16366ca27f7cef76587a9f9eb76b4209d991b38b`; blob `24f020a27a2fa6884b4e4de41f90bfc98b52e169`. The deployed source equals that Git blob byte-for-byte.
+
+The assessment exposed by `get_submission` now includes ordered source records: URL, `fetched` / `unavailable` / `oversized`, and raw byte count. Validators independently fetch and compare these fields as well as the evidence digest. Bodies above 5,000 bytes are rejected whole; no truncation occurs.
+
+F1: HTTPX supports HTTP/1.1 and HTTP/2. F2: a paraphrase of that protocol-support finding. F3: HTTPX requires Python 3.9 or newer. The same upstream commit-pinned README is 4,944 raw bytes, strict UTF-8, measured with curl.
+
+Exact supporting lines in the [pinned README](https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/README.md):
+
+```text
+Line 65: * HTTP/1.1 [and HTTP/2 support](https://www.python-httpx.org/http2/).
+Line 104: HTTPX requires Python 3.9+.
+```
+
+F1 entered `F-000001` at registry version 1 and earned 30 units. F2 was judged EQUIVALENT at input version 1, linked to `F-000001`, and earned zero. F3 was judged NOVEL at input version 1, entered `F-000002`, advanced the registry to version 2, and earned 20 units. Both rewards were claimed. A forged reveal and duplicate reward claim finalized with the expected contract errors and unchanged relevant state.
+
+See [release manifest](deployments/studionet-release-2026-10-12.json), [command results](deployments/studionet-commands-2026-10-12.jsonl), and [Portal draft](SUBMISSION_DRAFT.md). The repository remains PRIVATE; make it public manually before submitting.
+
+F3 finalized by majority (3 AGREE, 1 DISAGREE, 1 IDLE), not unanimously. The installed Python SDK used an empty-string method key incompatible with the pinned runner; the demo harness restores the legacy `method` key. A preliminary deployment and its failed dispatch transaction are retained in the manifest. No novelty judgment was retried.
